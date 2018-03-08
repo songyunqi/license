@@ -42,7 +42,7 @@
         <!-- -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
+            <artifactId>spring-boot-starter-velocity</artifactId>
         </dependency>
 
         <dependency>
