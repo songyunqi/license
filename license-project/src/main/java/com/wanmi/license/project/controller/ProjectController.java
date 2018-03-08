@@ -17,7 +17,7 @@ import java.io.IOException;
 
 @Controller
 @RequestMapping("project")
-public class ProjectController extends CController<Project, Long, ProjectRequest, AResponse> {
+public class ProjectController extends CController<ProjectRequest, AResponse> {
 
     @Autowired
     ProjectService projectService;
