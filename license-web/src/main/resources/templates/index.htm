@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta 	name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	
+	<!-- Bootstrap 3.3.5 -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    
+	<!-- Theme style -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/dist/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/dist/css/skins/skin-blue.min.css">
+	
+	<title>OpenLink | OWP</title>
+	
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-datetimepicker.min.css"> 
+	<script src="bower_components/bootstrap/dist/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap-datetimepicker.zh-CN.js"></script>
+	
+	<script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
+
+	<link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
+	<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="plugins/fastclick/fastclick.min.js"></script>
+    
+	<script src="bower_components/moment/min/moment.min.js"></script>
+	
+	<script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+	
+	<script src="bower_components/noty/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+	
+	<script src="app/app.js"></script>
+	<script src="app/utils.js"></script>
+	<script src="app/directives.js"></script>
+	<script src="app/heartbeat.js"></script>
+	<script src="app/infocenter.js"></script>
+	<script src="app/companyinfo.js"></script>
+	<script src="app/companytype.js"></script>
+	<script src="app/memberrole.js"></script>
+	<script src="app/orgmemberrole.js"></script>
+	<script src="app/profile/PasswordController.js"></script>
+	<script src="app/ReportController.js"></script>
+	<script src="app/profile/PasswordController.js"></script>
+	<script src="app/profile/ProfileController.js"></script>
+	<script src="app/profile/BasicInfoController.js"></script>
+	<script src="app/profile/ProjectInfoController.js"></script>
+	<script src="app/personalinformation.js"></script>
+	<script src="app/profile/PasswordController.js"></script>
+	<script src="app/dailyreport/DailyReportExController.js"></script>
+	<script src="app/dailyreport/SelfReportController.js"></script>
+	<script src="app/dailyreport/SubDailyReportController.js"></script>
+	<script src="app/dailyreport/WriteReportController.js"></script>
+	<script src="app/dailyreport/ProjectReportController.js"></script>
+	<script src="app/post/PostController.js"></script>
+	<script src="app/dailyreport/ProjectReportController.js"></script>
+	<script type="text/javascript" src="bower_components/cos/sdk/qcloud_sdk.js"></script>
+	<script type="text/javascript" src="bower_components/cos/sdk/swfobject.js"></script>
+	<script src="app/qcloud.js"></script>
+	<script src="app/WXYT.js"></script>
+	<link rel="stylesheet" href="bower_components/zTree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="bower_components/zTree/js/jquery.ztree.core.js"></script>
+	<script type="text/javascript" src="bower_components/zTree/js/jquery.ztree.excheck.js"></script>
+	<script type="text/javascript" src="bower_components/zTree/js/jquery.ztree.exedit.js"></script>
+	<script src="app/org/OrgMemberController.js"></script>
+	<script src="app/org/OrgMemberManController.js"></script>
+	<script src="app/project/ProjectMemberController.js"></script>
+	<script src="app/profile/ProjecttypemanageController.js"></script>
+	<script src="app/profile/ProjectmanageController.js"></script>
+	<script src="app/profile/ProjectmemberroleController.js"></script>
+	<script src="app/employeemanage.js"></script> 
+	<script src="app/post/EmploySouController.js"></script>
+	<script src="app/post/PostController.js"></script>
+	<script src="app/role/MenuCtrl.js"></script>
+	<script src="app/role/RoleCtrl.js"></script>
+	<script src="app/common.js"></script>
+	<script src="app/expense/ExpenseCtrl.js"></script>
+	<script src="app/budget/BudgetCtrl.js"></script>
+	
+	<script src="app/dailyreport/MyRptCtrl.js"></script>
+	<script src="app/profile/projectTypeCtrl.js"></script>
+	<script src="app/post/empsourceCtrl.js"></script>
+	<script src="app/role/UserRoleCtrl.js"></script>
+	<script src="app/todo/TodoController.js"></script>
+	<script src="app/todo/TodoSvc.js"></script>
+	<script src="app/leave/LeaveCtrl.js"></script>
+	<script src="app/leave/LeaveSvc.js"></script>
+	<script src="app/EntryController.js"></script>
+	<script src="app/overtime/OverTimeCtrl.js"></script>
+	<script src="app/positive/PositiveCtrl.js"></script>
+	<script src="app/positive/PositiveSvc.js"></script>
+
+	<script src="app/expensefill/ExpenseFillController.js"></script>
+
+	<script src="app/turnover/TurnoverCtrl.js"></script>
+	<script src="app/trip/TripCtrl.js"></script>
+	<script src="app/trip/TripSvc.js"></script>
+	<script src="app/selfProcess/selfProcessCtrl.js"></script>
+	<script src="app/expensetrip/ExpensetripCtrl.js"></script>
+	<script src="app/hire/hireCtrl.js"></script>
+	<script src="app/atd/AtdCtrlr.js"></script>
+	<script src="app/atd/AtdSvc.js"></script>
+	<script src="app/dailyreport/ReportcountCtrl.js"></script>
+	
+	<style type="text/css">
+	[ng\:cloak], [ng-cloak], .ng-cloak {
+		display: none !important;
+	}
+	.sidebar-menu .treeview-menu>li {
+    	margin: 0;
+    	margin-left: 17px;
+	}
+	</style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+	
+	<div class="wrapper">
+
+		<!-- Main Header -->
+		<header class="main-header">
+
+			<!-- Logo -->
+			<a href="javascript:void(0);" class="logo"> 
+				<span class="logo-lg">
+					<!--  <b>OWP</b> -->
+					<img style="width: 150px;margin-right: 25px;" alt="" src="bower_components/bootstrap/dist/css/dist/img/logohead.png">
+				</span>
+			</a>
+
+			<!-- Header Navbar -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="javascript:void(0);" class="sidebar-toggle" data-toggle="offcanvas"
+					role="button"> <span class="sr-only">Toggle navigation</span>
+				</a>
+				<!-- Navbar Right Menu -->
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<!-- Menu toggle button --> <a href="javascript:void(0);" class="dropdown-toggle"
+							data-toggle="dropdown"> <i class="fa fa-envelope-o"></i> <!--<span
+								class="label label-success">4</span>-->
+						</a>
+							<!--<ul class="dropdown-menu">
+								<li class="header">You have 4 messages</li>
+								<li>
+									&lt;!&ndash; inner menu: contains the messages &ndash;&gt;
+									<ul class="menu">
+										<li>
+											&lt;!&ndash; start message &ndash;&gt; <a href="javascript:void(0);">
+												<div class="pull-left">
+													&lt;!&ndash; User Image &ndash;&gt;
+													<img
+														src="bower_components/bootstrap/dist/css/dist/img/user2-160x160.jpg"
+														class="img-circle" alt="User Image">
+												</div> &lt;!&ndash; Message title and timestamp &ndash;&gt;
+												<h4>
+													Support Team <small><i class="fa fa-clock-o"></i> 5
+														mins</small>
+												</h4> &lt;!&ndash; The message &ndash;&gt;
+												<p>Why not buy a new awesome theme?</p>
+										</a>
+										</li>
+										&lt;!&ndash; end message &ndash;&gt;
+									</ul>
+									&lt;!&ndash; /.menu &ndash;&gt;
+								</li>
+								<li class="footer"><a href="javascript:void(0);">See All Messages</a></li>
+							</ul>-->
+						</li>
+
+						<li class="dropdown notifications-menu">
+							<a href="#todolist" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-bell-o"></i>
+								<span class="label label-warning" id="todoNum"></span>
+							</a>
+							<!--<ul class="dropdown-menu">
+								<li class="header">You have 10 notifications</li>
+								<li>
+									<ul class="menu">
+										<li>
+											<a href="javascript:void(0);"> <i class="fa fa-users text-aqua"></i> 5 new members joined today</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer"><a href="javascript:void(0);">View all</a></li>
+							</ul>-->
+						</li>
+						<!-- Tasks Menu -->
+						<li class="dropdown tasks-menu">
+							<!-- Menu Toggle Button --> <a href="javascript:void(0);" class="dropdown-toggle"
+							data-toggle="dropdown"> <i class="fa fa-flag-o"></i> <!--<span
+								class="label label-danger">9</span>-->
+						</a>
+							<!--<ul class="dropdown-menu">
+								<li class="header">You have 9 tasks</li>
+								<li>
+									&lt;!&ndash; Inner menu: contains the tasks &ndash;&gt;
+									<ul class="menu">
+										<li>
+											&lt;!&ndash; Task item &ndash;&gt; <a href="javascript:void(0);"> &lt;!&ndash; Task title and progress text &ndash;&gt;
+												<h3>
+													Design some buttons <small class="pull-right">20%</small>
+												</h3> &lt;!&ndash; The progress bar &ndash;&gt;
+												<div class="progress xs">
+													&lt;!&ndash; Change the css width attribute to simulate progress &ndash;&gt;
+													<div class="progress-bar progress-bar-aqua"
+														style="width: 20%" role="progressbar" aria-valuenow="20"
+														aria-valuemin="0" aria-valuemax="100">
+														<span class="sr-only">20% Complete</span>
+													</div>
+												</div>
+										</a>
+										</li>
+										&lt;!&ndash; end task item &ndash;&gt;
+									</ul>
+								</li>
+								<li class="footer"><a href="javascript:void(0);">View all tasks</a></li>
+							</ul>-->
+						</li>
+						<!-- User Account Menu -->
+						<li class="dropdown user user-menu">
+							<!-- Menu Toggle Button --> <a href="javascript:void(0);" class="dropdown-toggle"
+							data-toggle="dropdown"> <!-- The user image in the navbar-->
+								<img
+								src="bower_components/bootstrap/dist/css/dist/img/user2-160x160.jpg"
+								class="user-image" alt="User Image"> <!-- hidden-xs hides the username on small devices so only the image appears. -->
+								<span href="javascript:void(0);" class="dropdown-toggle"role="button">$!{employee.identity.name}&nbsp;&nbsp;</span>
+						</a>
+							<ul class="dropdown-menu">
+								<!-- The user image in the menu -->
+								<li class="user-header">
+								<div style="height: 90px;display: inline;">
+								<img src="bower_components/bootstrap/dist/css/dist/img/user2-160x160.jpg"
+									class="img-circle" style="height: 90px;    margin-left: 30px;" alt="User Image">
+									<img src="bower_components/bootstrap/dist/css/dist/img/bt_edit.png"
+									class="img-circle" style="width: 30px;height: 27px;margin-bottom: -65px;margin-left: 6px;">
+								</div>
+								<!-- 
+									<p>
+										Alexander Pierce - Web Developer
+									</p>
+									-->
+									<p href="javascript:void(0);" class="dropdown-toggle"role="button">您好，$!{employee.identity.name}&nbsp;&nbsp;</p>
+									<b href="javascript:void(0);" class="dropdown-toggle"role="button" style="font-size: 15px;font-family: 楷体;text-align: center;">$!{employee.post.nameCn}&nbsp;&nbsp;</b>
+									</li>
+								<!-- Menu Body -->
+								<!-- Menu Footer-->
+								<li class="user-footer">
+									<div class="pull-left">
+										<a href="#modifypassword" class="btn btn-default btn-flat">修改密码</a>
+									</div>
+									<div class="pull-right">
+										<a href="logout" class="btn btn-default btn-flat">退出登录</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<!-- Control Sidebar Toggle Button -->
+						<li><a href="javascript:void(0);" data-toggle="control-sidebar"><i
+								class="fa fa-gears"></i></a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- Left side column. contains the logo and sidebar -->
+		<aside class="main-sidebar">
+
+			<!-- sidebar: style can be found in sidebar.less -->
+			<section class="sidebar">
+
+				<!-- Sidebar user panel (optional) -->
+				<div class="user-panel">
+					<div class="pull-left image">
+						<img
+							src="bower_components/bootstrap/dist/css/dist/img/user2-160x160.jpg"
+							class="img-circle" alt="User Image">
+					</div>
+					<div class="pull-left info">
+							<p href="javascript:void(0);" class="dropdown-toggle"role="button" style="margin-left: 12px;">$!{employee.identity.name}&nbsp;&nbsp;</p>
+						<!-- Status -->
+						<a href="javascript:void(0);"><i class="fa fa-circle text-success" style="margin-left: 10px;"></i> Online</a>
+					</div>
+				</div>
+
+				<!-- search form (Optional) -->
+				<form action="#" method="get" class="sidebar-form">
+					<div class="input-group">
+						<input type="text" name="q" class="form-control"
+							placeholder="Search..."> <span class="input-group-btn">
+							<button type="submit" name="search" id="search-btn"
+								class="btn btn-flat">
+								<i class="fa fa-search"></i>
+							</button>
+						</span>
+					</div>
+				</form>
+				<!-- /.search form -->
+
+				<!-- Sidebar Menu -->
+				<ul class="sidebar-menu" id="menuList">
+				
+					<li class="treeview">
+						<a href="javascript:void(0);">
+						<i class="fa fa-dollar"></i>
+							<span>考勤</span>
+							<i class="fa fa-angle-left pull-right"></i></a>
+						<ul class="treeview-menu">
+							<li><a href="#attdpage"><i class="fa fa-circle-o"></i>考情</a></li>
+						</ul>
+					</li>
+						
+				</ul>
+			</section>
+		</aside>
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+			<section class="content" ui-view></section>
+		</div>
+
+		<footer class="main-footer">
+			<!-- To the right -->
+			<div class="pull-right hidden-xs">Anything you want</div>
+			<!-- Default to the left -->
+			<strong>Copyright &copy; 2016 <a href="javascript:void(0);">openlink</a>.
+			</strong> All rights reserved.
+		</footer>
+
+		<!-- Control Sidebar -->
+		<aside class="control-sidebar control-sidebar-dark">
+			<!-- Create the tabs -->
+			<ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+				<li class="active"><a href="#control-sidebar-home-tab"
+					data-toggle="tab"><i class="fa fa-home"></i></a></li>
+				<li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i
+						class="fa fa-gears"></i></a></li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<!-- Home tab content -->
+				<div class="tab-pane active" id="control-sidebar-home-tab">
+					<h3 class="control-sidebar-heading">Recent Activity</h3>
+					<ul class="control-sidebar-menu">
+						<li><a href="javascript:void(0);"> <i
+								class="menu-icon fa fa-birthday-cake bg-red"></i>
+								<div class="menu-info">
+									<h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+									<p>Will be 23 on April 24th</p>
+								</div>
+						</a></li>
+					</ul>
+					<!-- /.control-sidebar-menu -->
+
+					<h3 class="control-sidebar-heading">Tasks Progress</h3>
+					<ul class="control-sidebar-menu">
+						<li><a href="javascript:void(0);">
+								<h4 class="control-sidebar-subheading">
+									Custom Template Design <span
+										class="label label-danger pull-right">70%</span>
+								</h4>
+								<div class="progress progress-xxs">
+									<div class="progress-bar progress-bar-danger"
+										style="width: 70%"></div>
+								</div>
+						</a></li>
+					</ul>
+					<!-- /.control-sidebar-menu -->
+
+				</div>
+				<!-- /.tab-pane -->
+				<!-- Stats tab content -->
+				<div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab
+					Content</div>
+				<!-- /.tab-pane -->
+				<!-- Settings tab content -->
+				<div class="tab-pane" id="control-sidebar-settings-tab">
+					<form method="post">
+						<h3 class="control-sidebar-heading">General Settings</h3>
+						<div class="form-group">
+							<label class="control-sidebar-subheading"> Report panel
+								usage <input type="checkbox" class="pull-right" checked>
+							</label>
+							<p>Some information about this general settings option</p>
+						</div>
+						<!-- /.form-group -->
+					</form>
+				</div>
+				<!-- /.tab-pane -->
+			</div>
+		</aside>
+		<!-- /.control-sidebar -->
+		<!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+		<div class="control-sidebar-bg"></div>
+	</div>
+	<!-- ./wrapper -->
+
+	<!-- REQUIRED JS SCRIPTS -->
+	<div>
+		<input type="hidden" id = "${_csrf.parameterName}" name="${_csrf.parameterName}" value="${_csrf.token}" />
+	</div>
+	<!-- AdminLTE App -->
+	
+	<script src="dist/js/app.min.js"></script>
+	
+	<div id="globalEventDom"></div>
+</body>
+<script type="text/javascript">
+	document.onkeydown = check;
+	function check(e) {
+		var code;
+		if (!e)
+			var e = window.event;
+		if (e.keyCode)
+			code = e.keyCode;
+		else if (e.which)
+			code = e.which;
+		if (((event.keyCode == 8) && ((event.srcElement.type != "text"
+				&& event.srcElement.type != "textarea" && event.srcElement.type != "password") || event.srcElement.readOnly == true))
+				|| ((event.ctrlKey) && ((event.keyCode == 78) || (event.keyCode == 82)))
+				|| (event.keyCode == 116)) {
+			event.keyCode = 0;
+			event.returnValue = false;
+		}
+		return true;
+	}
+
+
+	var getTODONum = function(){
+		var url = 'gettodoNum';
+		$.ajax({
+			url : url,
+			type : 'GET',
+			success : function(data){
+				if(data.retcode==0){
+					$('#todoNum').text(data.size==0?'':data.size);
+				}
+			}
+		});
+	}
+	
+	getTODONum();
+	//五分钟轮训一次
+	setInterval(function(){
+		getTODONum();
+	},1000*60*5);
+
+	var _gwin = jQuery("#globalEventDom");
+	
+	_gwin.bind("todolistchanged",function(){
+		getTODONum();
+	});
+	
+	//_gwin.trigger("todolistchanged");
+	
+	var requestUrl = 'account/getRoleMenu';
+	$.ajax({
+		url: 'account/getRoleMenu',
+		type: 'get',
+		dataType: 'json',
+		success: function(_data) {
+			if (!_data.success) {
+				alert(_data.msg);
+				return;
+			}
+			var menuList = _data.data;
+			for (var i in menuList) {
+				var data = menuList[i];
+				var _li = $('<li class="treeview"><a href="javascript:void(0);">' + '<i class=""></i> ' + '<span></span>' + '</a></li>');
+				_li.find('a').attr('href', filterNULL(data.url).trim()||"javascript:void(0);");
+				_li.find('i').addClass(data.menu_icon||'fa fa-edit');
+				_li.find('span').text(data.title);
+				buildMultiMenu(data, _li);
+				$('#menuList').append(_li);
+			}
+		}
+	});
+
+	function buildMultiMenu(_data, _$li) {
+		var rightPic = $('<i class="fa fa-angle-left pull-right"></i>');
+		var children = _data.children;
+		if(children.length!=0){
+			_$li.find('a').append(rightPic);
+			var menu_ul = $('<ul class="treeview-menu"></ul>');
+			for(var i in children){
+				var child = children[i];
+				var menu_li = $('<li><a href="pages/layout/top-nav.html"><i class=""></i><span>Top Navigation</span></a></li>');
+				menu_li.find('a').attr('href',child.url);
+				menu_li.find('i').addClass(child.menu_icon||'fa fa-circle-o');
+				menu_li.find('span').text(child.title);
+				menu_ul.append(menu_li);
+				buildMultiMenu(child,menu_li);
+				_$li.append(menu_ul);
+			}
+		}
+	}
+	
+</script>
+<script type="text/javascript">
+	//jQuery.noConflict();
+</script>
+</html>
