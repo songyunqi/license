@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-public interface AController<T, TRequest, TResponse> {
+public interface AController<TRequest, TResponse> {
 
 	TResponse doStatis(TRequest request);
 

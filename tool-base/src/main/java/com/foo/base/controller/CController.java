@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
-public abstract class CController<T, ID, TRequest, TResponse>
-        implements DDController<T, ID, TRequest, TResponse>, AController<T, TRequest, TResponse> {
+public abstract class CController<TRequest, TResponse>
+        implements DDController<TRequest, TResponse>, AController<TRequest, TResponse> {
 
     @RequestMapping("save")
     @ResponseBody
