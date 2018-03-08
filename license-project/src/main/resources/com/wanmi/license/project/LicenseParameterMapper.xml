@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.wanmi.license.project.mapper.LicenseParameterMapper">
+
+    <resultMap id="BaseResultMap" type="com.wanmi.license.project.domain.LicenseParameter">
+
+        <id column="id" property="id"/>
+        <result column="project_id" property="projectId"/>
+        <result column="consumer_amount" property="consumerAmount"/>
+        <result column="consumer_type" property="consumerType"/>
+        <result column="holder" property="holder"/>
+        <result column="issuer" property="issuer"/>
+        <result column="subject" property="subject"/>
+        <result column="notBefore" property="notBefore"/>
+        <result column="notAfter" property="notAfter"/>
+        <result column="info" property="info"/>
+        <result column="extra" property="extra"/>
+
+    </resultMap>
+
+    <sql id="baseColumns">
+        id,project_id,consumer_amount,consumer_type,holder,issuer,
+        subject,notBefore,notAfter,info,extra
+    </sql>
+
+    <!--公用whereSql-->
+    <sql id="baseWhereSql">
+
+    </sql>
+
+</mapper>

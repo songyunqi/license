@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.wanmi.license.project.mapper.ProjectMapper">
+
+    <resultMap id="BaseResultMap" type="com.wanmi.license.project.domain.Project">
+        <id column="id" property="id"/>
+        <result column="group_id" property="groupId"/>
+        <result column="artifact_id" property="artifactId"/>
+        <result column="company_name" property="companyName"/>
+        <result column="default_password" property="defaultPassword"/>
+        <result column="licensing_subject" property="licensingSubject"/>
+    </resultMap>
+
+    <sql id="baseColumns">
+        id,group_id,artifact_id,company_name,default_password,licensing_subject
+    </sql>
+
+    <select id="list" resultMap="BaseResultMap" parameterType="com.wanmi.license.project.request.ProjectRequest">
+        SELECT
+        <include refid="baseColumns"/>
+        FROM t_license_project AS a
+        WHERE 1 = 1
+    </select>
+
+    <select id="getOne" resultMap="BaseResultMap" parameterType="com.wanmi.license.project.request.ProjectRequest">
+        SELECT
+        <include refid="baseColumns"/>
+        FROM t_license_project AS a
+        WHERE 1 = 1
+        AND a.id = #{id}
+    </select>
+
+    <update id="save" parameterType="com.wanmi.license.project.domain.Project">
+        update t_license_project as a
+        <set>
+            <if test="groupId != null and groupId != ''">
+                group_id = #{groupId},
+            </if>
+            <if test="artifactId != null and artifactId != ''">
+                artifact_id = #{artifactId},
+            </if>
+
+            <if test="companyName != null and companyName != ''">
+                company_name = #{companyName},
+            </if>
+            <if test="defaultPassword != null and defaultPassword != ''">
+                default_password = #{defaultPassword},
+            </if>
+            <if test="licensingSubject != null and licensingSubject != ''">
+                licensing_subject = #{licensingSubject},
+            </if>
+        </set>
+        where a.id = #{id}
+    </update>
+
+</mapper>
