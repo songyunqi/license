@@ -1,0 +1,149 @@
+<div>
+    <section class="content-header">
+        <h1>
+            License
+            <small>项目</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="javascript:void(0);"><i class="fa fa-dashboard"></i>Selection</a></li>
+            <li class="active">License</li>
+            <li class="active">项目</li>
+        </ol>
+    </section>
+    <!--主要信息  -->
+    <div class="row" style=" padding: 0px 20px;background: ghostwhite;margin-top: 16px;">
+        <div class="">
+            <div class="col-md-12" id="projectTab">
+                <div class="box box-warning" style="position: relative; height: 710px;">
+                    <!-- /.box-header -->
+                    <div class="box-header">
+                        <h3 class="box-title">项目</h3>
+                        <div class="box-tools">
+                            <div class="input-group" style="width:200px;">
+                                <input type="text" name="table_search" class="form-control input-sm pull-right"
+                                       ng-model="keyword" placeholder="关键字">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary" ng-click="search();">
+                                        <li class="fa fa-search"></li>
+                                    </button>
+                                    <button class="btn btn-sm btn-primary" ng-click="addpty();">
+                                        <li class="fa fa-plus"></li>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th width="5%">#</th>
+                                <th>项目类型</th>
+                                <th>类型描述</th>
+                                <th style="width:180px;">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="pty in page.content">
+
+                                <td>{{$index+1}}</td>
+                                <td>{{pty.name}}</td>
+                                <td>{{pty.comment}}</td>
+                                <td>
+                                    <a class="badge bg-light-blue" ng-click="editprj(pty);">编辑</a>
+                                    <a class="badge bg-red" ng-click="delpytUI(pty);">删除</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <tfoot>
+                        <div ng-show="page.content.length">
+                            <pagenation page="page"></pagenation>
+                        </div>
+                        </tfoot>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 编辑框 -->
+        <div class="col-md-4" style="display:none;" id="proTypInfo">
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title">编辑类型</h3>
+                    <div class="box-tools pull-right">
+                        <button class="btn btn-sm btn-box-tool" ng-click="close();"><i class="fa fa-remove"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <form name="myForm" novalidate>
+                        <!-- text input -->
+
+                        <div class="form-group" ng-class="{true:'has-success', false:'has-error'}[!!t_ptype.name]">
+                            <label class="control-label">项目类型 <i class="fa fa-check" ng-show="t_ptype.name"></i><input
+                                    type="hidden" class="ptypeId" value="{{t_ptype.id}}"/></label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <li class="fa fa-laptop"></li>
+                                </div>
+                                <input type="text" class="form-control" placeholder="输入" name="name" id="addname"
+                                       ng-model="t_ptype.name">
+                            </div>
+
+                            <div class="form-group"
+                                 ng-class="{true:'has-success',false:'has-error'}[!!t_ptype.comment]">
+                                <label class="control-label">类型描述<i class="fa fa-check"
+                                                                    ng-show="t_ptype.comment"></i></label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <li class="fa fa-th-list"></li>
+                                    </div>
+                                    <textarea type="text" row="3" class="form-control" placeholder="输入"
+                                              name="description" id="adddescription" ng-model="t_ptype.comment">
+							</textarea>
+                                </div>
+                    </form>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    <div class="pull-right">
+                        <!--    <button type="submit" class="btn btn-default" ng-click="clear();">清空</button> -->
+                        <button type="submit" class="btn btn-primary" ng-disabled="!t_ptype.name||!t_ptype.comment"
+                                ng-click="savepty(t_ptype.id);">
+                            <li class="fa fa-save"></li>
+                            保存
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--删除项目类型模态框  -->
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" class='col-md-12'>
+        <form>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{affirmTitle}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal" role="form">
+                        <div class="modal-body">
+                            {{affirmContent}}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-sm btn-primary" ng-click="delprj(delprjTy);">确定</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

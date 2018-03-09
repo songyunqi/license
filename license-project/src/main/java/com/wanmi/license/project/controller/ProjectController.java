@@ -2,7 +2,6 @@ package com.wanmi.license.project.controller;
 
 import com.foo.base.controller.CController;
 import com.foo.base.response.AResponse;
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
 import com.wanmi.license.project.domain.Project;
 import com.wanmi.license.project.request.ProjectRequest;
@@ -12,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
 
@@ -78,6 +78,14 @@ public class ProjectController extends CController<ProjectRequest, AResponse> {
     @ResponseBody
     public AResponse hello() {
         return AResponse.builder().content("hello").build();
+    }
+
+
+    @RequestMapping("list-view")
+    public ModelAndView index() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("project/list");
+        return mv;
     }
 
 }
