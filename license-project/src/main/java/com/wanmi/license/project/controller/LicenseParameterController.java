@@ -42,7 +42,7 @@ public class LicenseParameterController extends CController<LicenseParameterRequ
     @RequestMapping("list-view")
     public ModelAndView index() {
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("Xx");
+        mv.setViewName("parameter/list");
         return mv;
     }
 }

@@ -32,7 +32,7 @@ App.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         .state('/parameter-list', {
             url: '/parameter-list',
             templateUrl: "/parameter/list-view",
-            controller: "ProjectController"
+            controller: "ParameterController"
         })
     ;
 }]);
