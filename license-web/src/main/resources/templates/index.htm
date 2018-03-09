@@ -39,12 +39,6 @@
 
     <script src="bower_components/moment/min/moment.min.js"></script>
 
-    <script src="app/app.js"></script>
-
-
-    <script src="app/project/ProjectController.js"></script>
-
-
     <style type="text/css">
         [ng\:cloak], [ng-cloak], .ng-cloak {
             display: none !important;
@@ -254,10 +248,12 @@
                 <li class="treeview">
                     <a href="javascript:void(0);">
                         <i class="fa fa-dollar"></i>
-                        <span>License工程</span>
+                        <span>License</span>
                         <i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="#project-list"><i class="fa fa-circle-o"></i>工程</a></li>
+                        <li><a href="#project-list"><i class="fa fa-circle-o"></i>License工程</a></li>
+
+                        <li><a href="#project-list"><i class="fa fa-circle-o"></i>License参数工程</a></li>
                     </ul>
                 </li>
             </ul>
@@ -355,7 +351,6 @@
 
 <script src="dist/js/app.min.js"></script>
 
-<div id="globalEventDom"></div>
 </body>
 <script type="text/javascript">
     document.onkeydown = check;
@@ -382,4 +377,9 @@
 <script type="text/javascript">
     //jQuery.noConflict();
 </script>
+<script src="app/app.js"></script>
+<script src="app/project/ProjectCtrl.js"></script>
+<script src="app/project/ProjectSvc.js"></script>
+<script src="app/project/ParameterCtrl.js"></script>
+<script src="app/project/ParameterSvc.js"></script>
 </html>

@@ -21,17 +21,17 @@ jQuery.ajaxSetup({
 
 App.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('a');
+    $urlRouterProvider.otherwise('/project-list');
 
     $stateProvider
-        .state('home',{
-            url: '/',
-            templateUrl: '/',
-            controller: 'HomeController',
+        .state('/project-list', {
+            url: '/project-list',
+            templateUrl: "/project/list-view",
+            controller: "ProjectController"
         })
-        .state('a', {
-            url: 'a',
-            templateUrl: "project/list-view",
+        .state('/parameter-list', {
+            url: '/parameter-list',
+            templateUrl: "/parameter/list-view",
             controller: "ProjectController"
         })
     ;

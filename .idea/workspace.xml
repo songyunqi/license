@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="648787ed-6d4a-4f45-809f-bc2b43d8df38" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectController.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectService.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/LicenseParameterController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/license-web/src/main/resources/static/app/directives.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ParameterCtrl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ParameterSvc.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/license-web/src/main/resources/templates/Xx.htm" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/ProjectController.java" afterPath="$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/ProjectController.java" />
-      <change beforePath="$PROJECT_DIR$/license-project/target/classes/com/wanmi/license/project/controller/ProjectController.class" afterPath="$PROJECT_DIR$/license-project/target/classes/com/wanmi/license/project/controller/ProjectController.class" />
       <change beforePath="$PROJECT_DIR$/license-web/src/main/resources/static/app/app.js" afterPath="$PROJECT_DIR$/license-web/src/main/resources/static/app/app.js" />
+      <change beforePath="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectController.js" afterPath="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectCtrl.js" />
+      <change beforePath="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectService.js" afterPath="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectSvc.js" />
       <change beforePath="$PROJECT_DIR$/license-web/src/main/resources/templates/index.htm" afterPath="$PROJECT_DIR$/license-web/src/main/resources/templates/index.htm" />
-      <change beforePath="$PROJECT_DIR$/license-web/target/classes/application.properties" afterPath="$PROJECT_DIR$/license-web/target/classes/application.properties" />
+      <change beforePath="$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm" afterPath="$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,8 +31,8 @@
       <file leaf-file-name="ProjectController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/ProjectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1917">
-              <caret line="83" column="30" lean-forward="false" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="30" />
+            <state relative-caret-position="351">
+              <caret line="88" column="5" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="88" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,61 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/license-web/src/main/java/com/wanmi/license/web/IndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/request/ProjectRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/service/ProjectService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2349">
-              <caret line="109" column="36" lean-forward="false" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BootApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/license-web/src/main/java/com/wanmi/license/web/BootApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.htm" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.htm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/index.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4644">
-              <caret line="172" column="116" lean-forward="false" selection-start-line="172" selection-start-column="116" selection-end-line="172" selection-end-column="116" />
+            <state relative-caret-position="606">
+              <caret line="383" column="37" lean-forward="false" selection-start-line="383" selection-start-column="37" selection-end-line="383" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#img#1;n#div#0;n#li#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -100,28 +52,181 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="list.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="68" column="8" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+            <state relative-caret-position="360">
+              <caret line="70" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#6440#6447#1" expanded="true" />
+                <element signature="e#6578#6585#1" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/license-project/pom.xml">
+      <file leaf-file-name="directives.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="243">
+              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+              <folding>
+                <marker date="1465282609808" expanded="true" signature="360:373" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="400:462" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="576:582" ph="&amp;nbsp;" />
+                <marker date="1465282609808" expanded="true" signature="582:588" ph="&amp;nbsp;" />
+                <marker date="1465282609808" expanded="true" signature="613:675" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="722:755" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="844:859" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="979:994" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="1165:1180" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="1298:1313" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="1384:1390" ph="&amp;nbsp;" />
+                <marker date="1465282609808" expanded="true" signature="1390:1396" ph="&amp;nbsp;" />
+                <marker date="1465282609808" expanded="true" signature="1421:1483" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="1516:1522" ph="&amp;nbsp;" />
+                <marker date="1465282609808" expanded="true" signature="1579:1591" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="1593:1599" ph="&amp;nbsp;" />
+                <marker date="1465282609808" expanded="true" signature="1628:1634" ph="&amp;nbsp;" />
+                <marker date="1465282609808" expanded="true" signature="1634:1640" ph="&amp;nbsp;" />
+                <marker date="1465282609808" expanded="true" signature="3954:3967" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="3995:4057" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="4126:4132" ph="&amp;nbsp;" />
+                <marker date="1465282609808" expanded="true" signature="4132:4138" ph="&amp;nbsp;" />
+                <marker date="1465282609808" expanded="true" signature="4163:4225" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="4272:4305" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="4394:4409" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="4529:4544" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="4715:4730" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="4848:4863" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="8190:8234" ph="..." />
+                <marker date="1465282609808" expanded="true" signature="8277:8290" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParameterCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ParameterCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectSvc.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectSvc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParameterSvc.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ParameterSvc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Xx.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/Xx.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3402">
+              <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LicenseParameterController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/LicenseParameterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
+                <element signature="e#610#611#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#782#783#0" expanded="true" />
+                <element signature="e#809#810#0" expanded="true" />
+                <element signature="e#871#872#0" expanded="true" />
+                <element signature="e#898#899#0" expanded="true" />
+                <element signature="e#961#962#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#1068#1069#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+                <element signature="e#1175#1176#0" expanded="true" />
+                <element signature="e#1202#1203#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LicenseParameterRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/request/LicenseParameterRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LicenseParameter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/domain/LicenseParameter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Project.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/domain/Project.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="14" column="36" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -146,6 +251,7 @@
       <find>工程</find>
       <find>menu</find>
       <find>menulis</find>
+      <find>globalEventDom</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,10 +311,14 @@
         <option value="$PROJECT_DIR$/license-web/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectController.js" />
-        <option value="$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm" />
         <option value="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectService.js" />
-        <option value="$PROJECT_DIR$/license-web/src/main/resources/templates/index.htm" />
+        <option value="$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm" />
+        <option value="$PROJECT_DIR$/license-web/src/main/resources/templates/Xx.htm" />
+        <option value="$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/LicenseParameterController.java" />
         <option value="$PROJECT_DIR$/license-web/src/main/resources/static/app/app.js" />
+        <option value="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ParameterSvc.js" />
+        <option value="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ParameterController.js" />
+        <option value="$PROJECT_DIR$/license-web/src/main/resources/templates/index.htm" />
       </list>
     </option>
   </component>
@@ -315,7 +425,9 @@
               <item name="license-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="license-all" type="b2602c69:ProjectViewProjectNode" />
@@ -323,8 +435,9 @@
               <item name="license-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="license-all" type="b2602c69:ProjectViewProjectNode" />
@@ -395,7 +508,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="license-all" type="b2602c69:ProjectViewProjectNode" />
@@ -405,7 +520,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -431,18 +545,19 @@
     <property name="SONARLINT_ANALYSIS_RESULTS_SCOPE" value="VCS changed files" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\lisence\license-all\license-web\src\main\resources" />
-      <recent name="D:\lisence\license-all\license-project" />
-      <recent name="D:\lisence\license-all\lib" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\lisence\license-all\license-project\src\main\resources\com\wanmi\license\project" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.wanmi.license.web.project.controller" />
       <recent name="com.wanmi.license.web" />
       <recent name="com.wanmi.license.project" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\lisence\license-all\license-project\src\main\resources\com\wanmi\license\project" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\lisence\license-all\license-web\src\main\resources\static\app" />
+      <recent name="D:\lisence\license-all\license-web\src\main\resources" />
+      <recent name="D:\lisence\license-all\license-project" />
+      <recent name="D:\lisence\license-all\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -578,7 +693,7 @@
       <workItem from="1520476945819" duration="278000" />
       <workItem from="1520477262915" duration="586000" />
       <workItem from="1520491559348" duration="2225000" />
-      <workItem from="1520577296470" duration="818000" />
+      <workItem from="1520577296470" duration="4184000" />
     </task>
     <task id="LOCAL-00001" summary="Xx">
       <created>1520502204799</created>
@@ -615,11 +730,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520561108026</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Xx">
+      <created>1520578174223</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1520578174223</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42071000" />
+    <option name="totallyTimeSpent" value="45437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -671,148 +793,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/ProjectController.java</url>
-          <line>85</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/response/AResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/service/CService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/domain/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/domain/LicenseParameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/mapper/LicenseParameterMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/mapper/ProjectMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/mapper/DDMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/controller/DDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/controller/AController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/user/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/user/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/user/UserRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/user/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.1.3.RELEASE/spring-security-core-4.1.3.RELEASE.jar!/org/springframework/security/core/Authentication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="410" column="0" lean-forward="false" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="407" column="0" lean-forward="false" selection-start-line="407" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.6/tomcat-embed-websocket-8.5.6.jar!/org/apache/tomcat/websocket/server/WsFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -988,87 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/controller/CController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="68" column="8" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#6440#6447#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/service/ProjectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2349">
-          <caret line="109" column="36" lean-forward="false" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/request/ProjectRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/index.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4644">
-          <caret line="172" column="116" lean-forward="false" selection-start-line="172" selection-start-column="116" selection-end-line="172" selection-end-column="116" />
-          <folding>
-            <element signature="n#style#0;n#img#1;n#div#0;n#li#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1917">
-          <caret line="83" column="30" lean-forward="false" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/license-web/src/main/java/com/wanmi/license/web/BootApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1077,11 +981,283 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/request/ProjectRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/license-web/src/main/java/com/wanmi/license/web/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="432">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/mapper/LicenseParameterMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/mapper/ProjectMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/service/ProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2133">
+          <caret line="101" column="89" lean-forward="false" selection-start-line="101" selection-start-column="83" selection-end-line="101" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/controller/AController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/controller/DDController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="52" lean-forward="true" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/controller/CController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8" column="65" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/mapper/DDMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/request/ARequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/response/AResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/service/DDService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/service/CService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/domain/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="14" column="36" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="70" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#6578#6585#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/Xx.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3402">
+          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/domain/LicenseParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/request/LicenseParameterRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/LicenseParameterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <marker date="1465282609808" expanded="true" signature="360:373" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="400:462" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="576:582" ph="&amp;nbsp;" />
+            <marker date="1465282609808" expanded="true" signature="582:588" ph="&amp;nbsp;" />
+            <marker date="1465282609808" expanded="true" signature="613:675" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="722:755" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="844:859" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="979:994" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="1165:1180" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="1298:1313" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="1384:1390" ph="&amp;nbsp;" />
+            <marker date="1465282609808" expanded="true" signature="1390:1396" ph="&amp;nbsp;" />
+            <marker date="1465282609808" expanded="true" signature="1421:1483" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="1516:1522" ph="&amp;nbsp;" />
+            <marker date="1465282609808" expanded="true" signature="1579:1591" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="1593:1599" ph="&amp;nbsp;" />
+            <marker date="1465282609808" expanded="true" signature="1628:1634" ph="&amp;nbsp;" />
+            <marker date="1465282609808" expanded="true" signature="1634:1640" ph="&amp;nbsp;" />
+            <marker date="1465282609808" expanded="true" signature="3954:3967" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="3995:4057" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="4126:4132" ph="&amp;nbsp;" />
+            <marker date="1465282609808" expanded="true" signature="4132:4138" ph="&amp;nbsp;" />
+            <marker date="1465282609808" expanded="true" signature="4163:4225" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="4272:4305" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="4394:4409" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="4529:4544" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="4715:4730" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="4848:4863" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="8190:8234" ph="..." />
+            <marker date="1465282609808" expanded="true" signature="8277:8290" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectSvc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ParameterSvc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ParameterCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/index.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="383" column="37" lean-forward="false" selection-start-line="383" selection-start-column="37" selection-end-line="383" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#img#1;n#div#0;n#li#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
