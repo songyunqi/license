@@ -83,7 +83,7 @@ App.directive('pagenation',function(){
 				element.find('.pagenum').val('');
 			});
 			element.find('.pagenum').bind('keydown',function(e){
-				
+
 			});
 			element.find('.gotopage').bind('click',function(){
 				if(!scope.page){return;}
@@ -173,7 +173,7 @@ App.directive('pagermini',function(){
 				element.find('.pagenum').val('');
 			});
 			element.find('.pagenum').bind('keydown',function(e){
-				
+
 			});
 			element.find('.gotopage').bind('click',function(){
 				if(!scope.page){return;}
@@ -194,91 +194,6 @@ App.directive('pagermini',function(){
 			});
 		}
 	}
-});
-
-
-App.filter("projectRole",function(){
-	return function (role) {
-		if(role==0){return "项目管理者";}
-	    return "项目成员";
-	}
-});
-App.filter("currentCom",function(){
-	return function (role) {
-		if(role){return "是";}
-	    return "否";
-	}
-});
-
-App.filter("loadName",function(){
-	return function(input,_srcData){
-		for(var item in _srcData){
-			var data = _srcData[item];
-			if(data.id==input){
-				return data.name || data.nameCn;
-			}
-		}
-	}
-});
-
-//输入框与下拉组合控件
-App.directive('combotree',function(){
-	return {
-		restrict: 'EA',
-		replace: 'true',
-		transclude : true,
-        scope : {
-        	//control:'='夫作用域
-        	control:'@'
-	    },
-		template:"<div>" 
-			    +    "<div class='form-group'>"
-			    +        "<label class='col-sm-2 control-label'>{{control.name}}:</label>"
-			    +        "<div class='col-sm-6'>"
-			    +            "<input class='form-control' placeholder='{{control.placeholder}}' id='{{control.id}}'>"
-			    +        "</div>"
-			    +        "<div class='col-sm-2'>"
-			    +            "<button type='button' class='btn btn-link'>{{control.btnText}}</button>"
-			    +        "</div>"
-				+    "</div>"
-				+    "<div class='wrap' style='display:none;position:absolute;z-index:10001'>"
-				+        "<ul class='ztree' style='margin-top:0;'></ul>"
-				+    "</div>"
-				+"</div>",
-		link:function(scope,element,attrs){
-						
-			element.find("input").click(function(){
-				var obj = element.find("input");
-				var objOffset = obj.offset();
-				element.find(".wrap.ztree").css({width:obj.outerWidth() + "px"});
-				element.find(".wrap.ztree").parent().css({left:objOffset.left + "px", top:objOffset.top + obj.outerHeight() + "px"}).slideDown("fast");
-			});
-			
-			var button = element.find("button");
-			var input = element.find("input");
-			var wrap = element.find("wrap");
-			$("body").bind("mousedown", function(){
-				//下拉框内部点击与输入框内部点击不消失
-				if (($(event.target).parents(".wrap").length>0)||event.target.id==$(input).attr('id')){
-					return;
-				}
-				element.find('.wrap').fadeOut("fast");
-			});
-		}
-	}
-});
-
-App.filter("stateFilter", function() {
-    var filterfun = function(item) {
-        var ret = "未知";
-        if(item.state==0){
-        	ret = "进行中";
-        }else if(item.state==1){
-        	ret = "完成";
-        }
-        return ret;
-    };
-    return filterfun;
 });
 
 App.directive('modal',function(){
