@@ -5,4 +5,8 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
     };
     $scope.init();
 
+
+    $scope.addpty = function () {
+        $('#commentModal').modal('show');
+    };
 }]);
