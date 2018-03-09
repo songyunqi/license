@@ -124,29 +124,61 @@
         </div>
     </div>
 </div>
-<!--删除项目类型模态框  -->
+
+
+<!--新建系统账号 -->
 <div class="modal fade" id="commentModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" class='col-md-12'>
-        <form>
-            <div class="modal-content">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" role="form">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">{{affirmTitle}}</h4>
+                    <h4 class="modal-title" id="myModalLabel">新建项目</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="form-horizontal" role="form">
-                        <div class="modal-body">
-                            {{affirmContent}}
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">组Id(groupId)</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="groupId" ng-model="t_project.groupId"
+                                   required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">构件Id(artifactId)</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="artifactId" ng-model="t_project.artifactId"
+                                   required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">公司名称</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="companyName"
+                                   ng-model="t_project.companyName" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">默认密码</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="defaultPassword"
+                                   ng-model="t_project.defaultPassword" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">授权主体</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="licensingSubject"
+                                   ng-model="t_project.licensingSubject" required="required">
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">取消</button>
-                    <button type="submit" class="btn btn-sm btn-primary" ng-click="delprj(delprjTy);">确定</button>
+                    <button type="submit" class="btn btn-primary" ng-click="saveProject();">新建</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>
-
 
