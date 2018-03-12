@@ -43,7 +43,7 @@ public class ProjectController extends CController<ProjectRequest, AResponse> {
     }
 
     public AResponse doList(ProjectRequest request) {
-        return AResponse.builder().content(projectService.list(request)).build();
+        return AResponse.builder().content(projectService.page(request)).build();
     }
 
     public AResponse doPage(ProjectRequest request) {

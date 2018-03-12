@@ -19,4 +19,5 @@ public class ProjectRequest extends ARequest {
     private String defaultPassword;
     private String licensingSubject;
 
+    private String searchName;
 }

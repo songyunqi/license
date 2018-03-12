@@ -48,80 +48,29 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr ng-repeat="pty in page.content">
+                            <tr ng-repeat="prj in page.list">
 
                                 <td>{{$index+1}}</td>
-                                <td>{{pty.name}}</td>
-                                <td>{{pty.comment}}</td>
+                                <td>{{prj.groupId}}</td>
+                                <td>{{prj.artifactId}}</td>
+                                <td>{{prj.companyName}}</td>
+                                <td>{{prj.defaultPassword}}</td>
+                                <td>{{prj.licensingSubject}}</td>
                                 <td>
-                                    <a class="badge bg-light-blue" ng-click="editprj(pty);">编辑</a>
-                                    <a class="badge bg-red" ng-click="delpytUI(pty);">删除</a>
+                                    <a class="badge bg-light-blue" ng-click="editprj(prj);">编辑</a>
+                                    <a class="badge bg-red" ng-click="delprjUI(prj);">删除</a>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
                         <tfoot>
-                        <div ng-show="page.content.length">
                             <pagenation page="page"></pagenation>
-                        </div>
                         </tfoot>
                     </div>
                 </div>
             </div>
         </div>
         <!-- 编辑框 -->
-        <div class="col-md-4" style="display:none;" id="proTypInfo">
-            <div class="box box-warning">
-                <div class="box-header with-border">
-                    <h3 class="box-title">编辑类型</h3>
-                    <div class="box-tools pull-right">
-                        <button class="btn btn-sm btn-box-tool" ng-click="close();"><i class="fa fa-remove"></i>
-                        </button>
-                    </div>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                    <form name="myForm" novalidate>
-                        <!-- text input -->
-
-                        <div class="form-group" ng-class="{true:'has-success', false:'has-error'}[!!t_ptype.name]">
-                            <label class="control-label">项目类型 <i class="fa fa-check" ng-show="t_ptype.name"></i><input
-                                    type="hidden" class="ptypeId" value="{{t_ptype.id}}"/></label>
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <li class="fa fa-laptop"></li>
-                                </div>
-                                <input type="text" class="form-control" placeholder="输入" name="name" id="addname"
-                                       ng-model="t_ptype.name">
-                            </div>
-
-                            <div class="form-group"
-                                 ng-class="{true:'has-success',false:'has-error'}[!!t_ptype.comment]">
-                                <label class="control-label">类型描述<i class="fa fa-check"
-                                                                    ng-show="t_ptype.comment"></i></label>
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <li class="fa fa-th-list"></li>
-                                    </div>
-                                    <textarea type="text" row="3" class="form-control" placeholder="输入"
-                                              name="description" id="adddescription" ng-model="t_ptype.comment">
-							</textarea>
-                                </div>
-                    </form>
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer">
-                    <div class="pull-right">
-                        <!--    <button type="submit" class="btn btn-default" ng-click="clear();">清空</button> -->
-                        <button type="submit" class="btn btn-primary" ng-disabled="!t_ptype.name||!t_ptype.comment"
-                                ng-click="savepty(t_ptype.id);">
-                            <li class="fa fa-save"></li>
-                            保存
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
