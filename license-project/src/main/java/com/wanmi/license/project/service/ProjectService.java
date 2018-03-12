@@ -111,4 +111,9 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
 
         return null;
     }
+
+    public Long selectProjectCount(ProjectRequest request) {
+        Long count = projectMapper.selectProjectCount(request);
+        return count;
+    }
 }

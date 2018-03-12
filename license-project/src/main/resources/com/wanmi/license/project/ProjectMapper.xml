@@ -16,13 +16,20 @@
         id,group_id,artifact_id,company_name,default_password,licensing_subject
     </sql>
 
+    <select id="selectProjectCount" resultType="java.lang.Long"
+            parameterType="com.wanmi.license.project.request.ProjectRequest">
+        select count(0) from t_license_project as a
+        where 1 = 1
+    </select>
+
     <select id="list" resultMap="BaseResultMap" parameterType="com.wanmi.license.project.request.ProjectRequest">
         SELECT
         <include refid="baseColumns"/>
         FROM t_license_project AS a
         WHERE 1 = 1
         <if test="searchName != null and searchName != ''">
-            and a.company_name like #{searchName,jdbcType=VARCHAR} or a.licensing_subject like #{searchName,jdbcType=VARCHAR}
+            and a.company_name like #{searchName,jdbcType=VARCHAR} or a.licensing_subject like
+            #{searchName,jdbcType=VARCHAR}
         </if>
     </select>
 
