@@ -2,6 +2,7 @@ package com.wanmi.license.project.controller;
 
 import com.foo.base.controller.CController;
 import com.foo.base.response.AResponse;
+import com.github.pagehelper.ISelect;
 import com.github.pagehelper.PageInfo;
 import com.wanmi.license.project.domain.LicenseParameter;
 import com.wanmi.license.project.domain.Project;
@@ -48,12 +49,17 @@ public class ProjectController extends CController<ProjectRequest, AResponse> {
         return null;
     }
 
-    public AResponse doList(ProjectRequest request) {
-        return AResponse.builder().content(projectService.page(request)).build();
+    public AResponse doList(final ProjectRequest request) {
+        PageInfo<Project> page = projectService.page(request);
+        return AResponse.builder().content(page).build();
     }
 
-    public AResponse doPage(ProjectRequest request) {
-        PageInfo<Project> page = projectService.page(request);
+    public AResponse doPage(final ProjectRequest request) {
+        PageInfo<Project> page = projectService.page(request, new ISelect() {
+            public void doSelect() {
+                projectService.selectProjectCount(request);
+            }
+        });
         return AResponse.builder().content(page).build();
     }
 

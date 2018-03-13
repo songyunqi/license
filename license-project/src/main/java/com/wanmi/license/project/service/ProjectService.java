@@ -8,7 +8,6 @@ import com.wanmi.license.project.request.ProjectRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.beans.Transient;
 import java.io.*;
 import java.util.List;
 
@@ -150,6 +149,11 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
     public String genLicenseInitFile(LicenseParameter parameters) {
 
         return null;
+    }
+
+    public Long selectProjectCount(ProjectRequest request) {
+        Long count = projectMapper.selectProjectCount(request);
+        return count;
     }
 
     public static void main(String[] args) throws IOException {
