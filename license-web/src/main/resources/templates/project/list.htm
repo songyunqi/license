@@ -58,6 +58,7 @@
                                 <td>{{prj.licensingSubject}}</td>
                                 <td>
                                     <a class="badge bg-light-blue" ng-click="editprj(prj);">编辑</a>
+                                    <a class="badge bg-light-blue" ng-click="editDetail(prj);">参数</a>
                                     <a class="badge bg-red" ng-click="delprjUI(prj);">删除</a>
                                 </td>
                             </tr>
@@ -79,7 +80,7 @@
 <div class="modal fade" id="commentModal" tabindex="-1" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" name="myProject">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title" id="myModalLabel">新建项目</h4>
@@ -123,7 +124,96 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" ng-click="saveProject();">新建</button>
+                    <button type="submit" class="btn btn-primary" ng-disabled="!myProject.$valid"  ng-click="saveProject();">新建</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="commentModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal" role="form" name="myform">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" >参数</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">客户数量</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="consumerAmount" ng-model="prjParams.consumerAmount"
+                                   required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">客户类型</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="consumerType" ng-model="prjParams.consumerType"
+                                   required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">发布者</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="issuer" ng-model="prjParams.issuer"
+                                   required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">主体</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="subject"
+                                   ng-model="prjParams.subject" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">不早于</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="notBefore"
+                                   ng-model="prjParams.notBefore" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">不迟于</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="notAfter"
+                                   ng-model="prjParams.notAfter" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">信息</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="info"
+                                   ng-model="prjParams.info" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">扩展项1</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="extra1"
+                                   ng-model="prjParams.extra1" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">扩展项2</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="extra2"
+                                   ng-model="prjParams.extra2" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">扩展项3</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="extra3"
+                                   ng-model="prjParams.extra3" >
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" ng-disabled="!myform.$valid" ng-click="savePrjParamer();">新建</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 </div>
             </form>

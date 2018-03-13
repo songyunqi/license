@@ -3,8 +3,11 @@ package com.wanmi.license.project.controller;
 import com.foo.base.controller.CController;
 import com.foo.base.response.AResponse;
 import com.github.pagehelper.PageInfo;
+import com.wanmi.license.project.domain.LicenseParameter;
 import com.wanmi.license.project.domain.Project;
+import com.wanmi.license.project.request.LicenseParameterRequest;
 import com.wanmi.license.project.request.ProjectRequest;
+import com.wanmi.license.project.service.ProjectParamsService;
 import com.wanmi.license.project.service.ProjectService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +24,9 @@ public class ProjectController extends CController<ProjectRequest, AResponse> {
 
     @Autowired
     ProjectService projectService;
+
+    @Autowired
+    ProjectParamsService projectParamsService;
 
     public AResponse doStatis(ProjectRequest request) {
         return null;
@@ -86,6 +92,59 @@ public class ProjectController extends CController<ProjectRequest, AResponse> {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("project/list");
         return mv;
+    }
+
+    /**
+     * 查询项目信息
+     * @return
+     */
+    @RequestMapping("queryById")
+    @ResponseBody
+    public AResponse queryById(Long id){
+        Project project = projectService.getOne(id);
+        return AResponse.builder().content(project).build();
+    }
+
+    /**
+     * 保存项目信息
+     * @param project
+     * @return
+     */
+    @RequestMapping("saveProject")
+    @ResponseBody
+    public AResponse saveProject(Project project){
+
+        int res = projectService.save(project);
+
+        return AResponse.builder().content(res).build();
+    }
+
+
+
+    /**
+     * 查询参数信息
+     * @return
+     */
+    @RequestMapping("queryParamsById")
+    @ResponseBody
+    public AResponse queryParamsById(Long projectId){
+        LicenseParameter params = projectParamsService.getOneByProjectId(projectId);
+        return AResponse.builder().content(params).build();
+    }
+
+
+    /**
+     * 保存参数
+     * @param licenseParameter
+     * @return
+     */
+    @RequestMapping("saveParams")
+    @ResponseBody
+    public AResponse saveParams(LicenseParameter licenseParameter){
+
+        int res = projectParamsService.save(licenseParameter);
+
+        return AResponse.builder().content(res).build();
     }
 
 }

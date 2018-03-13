@@ -21,12 +21,43 @@
 
     <sql id="baseColumns">
         id,project_id,consumer_amount,consumer_type,holder,issuer,
-        subject,notBefore,notAfter,info,extra
+        subject, info,extra,
+        DATE_FORMAT(notBefore,   '%Y-%m-%d %H:%i:%S')  as notBefore,
+        DATE_FORMAT(notAfter,   '%Y-%m-%d %H:%i:%S')  as notAfter
     </sql>
 
     <!--公用whereSql-->
     <sql id="baseWhereSql">
 
     </sql>
+
+    <select id="selectByProjectId" resultMap="BaseResultMap" parameterType="com.wanmi.license.project.request.LicenseParameterRequest">
+        SELECT
+        <include refid="baseColumns"/>
+        FROM t_license_parameter AS a
+        WHERE 1 = 1
+        AND a.project_id = #{projectId}
+    </select>
+
+
+    <insert id="save" parameterType="com.wanmi.license.project.domain.LicenseParameter" keyProperty="id" useGeneratedKeys="true">
+      insert into t_license_parameter
+      (project_id,consumer_amount,consumer_type,issuer,
+        subject,notBefore,notAfter,info,extra)
+      values(#{projectId}, #{consumerAmount}, #{consumerType}, #{issuer}, #{subject}, #{notBefore}, #{notAfter}, #{info}, #{extra})
+    </insert>
+
+    <update id="updateById" parameterType="com.wanmi.license.project.domain.LicenseParameter" >
+        update t_license_parameter
+        set consumer_amount = #{consumerAmount},
+        consumer_type = #{consumerType},
+        issuer = #{issuer},
+        subject = #{subject},
+        notBefore =  #{notBefore},
+        notAfter = #{notAfter},
+        info = #{info},
+        extra = #{extra}
+        where id = #{id}
+    </update>
 
 </mapper>

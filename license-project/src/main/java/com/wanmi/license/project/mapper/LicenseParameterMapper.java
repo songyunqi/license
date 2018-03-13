@@ -5,4 +5,9 @@ import com.wanmi.license.project.domain.LicenseParameter;
 import com.wanmi.license.project.request.LicenseParameterRequest;
 
 public interface LicenseParameterMapper extends DDMapper<LicenseParameter, Long, LicenseParameterRequest> {
+
+
+    LicenseParameter selectByProjectId(Long projectId);
+
+    int updateById(LicenseParameter licenseParameter);
 }

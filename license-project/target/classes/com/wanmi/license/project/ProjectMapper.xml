@@ -34,7 +34,7 @@
         AND a.id = #{id}
     </select>
 
-    <update id="save" parameterType="com.wanmi.license.project.domain.Project">
+    <update id="updateById" parameterType="com.wanmi.license.project.domain.Project">
         update t_license_project as a
         <set>
             <if test="groupId != null and groupId != ''">
@@ -56,5 +56,11 @@
         </set>
         where a.id = #{id}
     </update>
+
+    <insert id="save" parameterType="com.wanmi.license.project.domain.Project">
+     insert into t_license_project
+     (group_id,artifact_id,company_name,default_password,licensing_subject)
+     values(#{groupId}, #{artifactId}, #{companyName}, #{defaultPassword}, #{licensingSubject})
+    </insert>
 
 </mapper>

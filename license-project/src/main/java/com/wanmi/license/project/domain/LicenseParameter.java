@@ -9,14 +9,15 @@ import java.util.Date;
 public class LicenseParameter implements Serializable {
 
     //private Map<String, Object> extra;
-
-    private int consumerAmount;
+    private Long id;
+    private Long projectId;
+    private Integer consumerAmount;
     private String consumerType;
     private String holder;
     private String issuer;
     private String subject;
-    private Date notBefore;
-    private Date notAfter;
+    private String notBefore;
+    private String notAfter;
     private String info;
     private String extra;
 }

@@ -8,14 +8,16 @@ import com.wanmi.license.project.request.ProjectRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.beans.Transient;
+import java.io.*;
 import java.util.List;
 
 @Service
 public class ProjectService extends CService<Project, Long, ProjectRequest> {
+
+    private String LiunxDir = "/data/license";
+
+    private String windowDir = "E:\\license";
 
     @Autowired
     ProjectMapper projectMapper;
@@ -30,7 +32,21 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
     }
 
     public int save(Project project) {
-        return 0;
+
+        if (project.getId() != null) {
+            projectMapper.save(project);
+        } else {
+            projectMapper.updateById(project);
+        }
+
+        try {
+            initProject(project);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return 0;
+        }
+
+        return 1;
     }
 
     public int delete(List<Long> longs) {
@@ -54,6 +70,24 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         String artifactId = project.getArtifactId();
 
         StringBuilder cmd = new StringBuilder();
+        String osName = System.getProperty("os.name" );
+        String dir;
+        String fileName = "";
+        if(osName.indexOf("Windows")>-1){
+            System.out.println(windowDir);
+            dir = windowDir;
+            fileName = "license.bat";
+        }else{
+            dir = LiunxDir;
+            fileName = "license.sh";
+        }
+
+        File file = new File(dir);
+        if(!file.exists()){
+            file.mkdir();
+        }
+        cmd.append(" cd "+dir);
+        cmd.append("\n");
         cmd.append(" mvn archetype:generate -B ");
         cmd.append(" -DarchetypeArtifactId=truelicense-maven-archetype");
         cmd.append(" -DarchetypeGroupId=net.java.truelicense");
@@ -65,17 +99,23 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         cmd.append(" -DlicensingSubject=").append("\"").append(licensingSubject).append("\"");
         cmd.append(" -Dversion=1.0-SNAPSHOT");
 
-        ProcessBuilder builder = new ProcessBuilder();
+        String fileDir = dir+File.separator+fileName;
+        file = new File(fileDir);
+        BufferedWriter out = new BufferedWriter(new FileWriter(file));
+        out.write(cmd.toString());
+        out.close();
+
+//        ProcessBuilder builder = new ProcessBuilder();
         Runtime runtime = Runtime.getRuntime();
-        Process process = runtime.exec(cmd.toString());
+        Process process = runtime.exec(fileDir);
         InputStream inputStream = process.getInputStream();
         BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, "gb2312"));
         String line;
         while ((line = br.readLine()) != null) {
             System.out.println(line);
         }
-        System.out.println(" init done=====================");
 
+        file.delete();
         return 0;
     }
 
@@ -110,5 +150,55 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
     public String genLicenseInitFile(LicenseParameter parameters) {
 
         return null;
+    }
+
+    public static void main(String[] args) throws IOException {
+        StringBuilder cmd = new StringBuilder();
+        String osName = System.getProperty("os.name" );
+        String dir;
+        String fileName = "";
+        if(osName.indexOf("Windows")>=0){
+            dir = "E:\\";
+            fileName = "license.bat";
+        }else{
+            dir = "/data/";
+            fileName = "license.sh";
+        }
+
+        File file = new File(dir);
+        if(!file.exists()){
+            file.mkdir();
+        }
+
+
+        cmd.append("cd "+dir);
+        cmd.append("\n");
+        cmd.append(" ping wwww.baidu.com");
+        String fileDir = dir+File.separator+fileName;
+        file = new File(fileDir);
+
+        BufferedWriter out = new BufferedWriter(new FileWriter(fileDir));
+        out.write(cmd.toString());
+        out.close();
+
+//        StringBuilder cmd = new StringBuilder();
+//        cmd.append("cd E:/");
+//
+//        String[] cmds = new String[3];
+//        cmds[0] = "cmd.exe" ;
+//        cmds[1] = "/C" ;
+//        cmds[2] = "cd E:/ ls";
+
+        ProcessBuilder builder = new ProcessBuilder();
+        Runtime runtime = Runtime.getRuntime();
+        Process process = runtime.exec(fileDir);
+        InputStream inputStream = process.getInputStream();
+        BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, "gb2312"));
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
+        System.out.println(" init done=====================");
+        file.delete();
     }
 }
