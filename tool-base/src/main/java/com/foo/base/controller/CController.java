@@ -1,11 +1,13 @@
 package com.foo.base.controller;
 
+import com.foo.base.request.ARequest;
+import com.foo.base.response.AResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
-public abstract class CController<TRequest, TResponse>
+public abstract class CController<TRequest extends ARequest, TResponse extends AResponse>
         implements DDController<TRequest, TResponse>, AController<TRequest, TResponse> {
 
     @RequestMapping("save")
@@ -43,7 +45,7 @@ public abstract class CController<TRequest, TResponse>
         return response;
     }
 
-    @RequestMapping("statis")
+    @RequestMapping("statics")
     @ResponseBody
     public TResponse statis(TRequest request) {
         TResponse response = doStatis(request);

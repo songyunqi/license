@@ -12,23 +12,23 @@ public abstract class CService<T, ID, TRequest extends ARequest> implements DDSe
 
     public abstract List<T> list(TRequest tRequest);
 
-    public PageInfo<T> page(TRequest request) {
-        Page<T> page = PageHelper.startPage(request.getPageNum(), request.getPageSize(), true);
-        List<T> list = list(request);
-        PageInfo<T> pageInfo = new PageInfo(page, page.getPageSize());
-        pageInfo.setList(list);
+    public PageInfo<T> page(final TRequest request) {
+        PageInfo<T> pageInfo = PageHelper.startPage(request.getPageNum(), request.getPageSize()).doSelectPageInfo(() -> list(request));
         return pageInfo;
     }
 
     public PageInfo<T> page(TRequest request, ISelect iSelect) {
-        Page<T> page;
-        long totalCount = 0;
-        page = PageHelper.startPage(request.getPageNum(), request.getPageSize(), false);
-        totalCount = page.doCount(iSelect);
+        //Long totalCount = PageHelper.count(iSelect);
+        //iSelect.
+        Page<?> page = PageHelper.startPage(request.getPageNum(), request.getPageSize(), false);
         List<T> list = list(request);
         PageInfo<T> pageInfo = new PageInfo(page, page.getPageSize());
         pageInfo.setList(list);
-        pageInfo.setTotal(totalCount);
+        //pageInfo.setTotal(totalCount);
+
+
+        pageInfo = PageHelper.startPage(request.getPageNum(), request.getPageSize()).doSelectPageInfo(iSelect);
+
         return pageInfo;
     }
 
