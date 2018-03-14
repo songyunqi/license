@@ -12,10 +12,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="license-all" target="1.5" />
-      <module name="license-project" target="1.5" />
+      <module name="license-all" target="1.8" />
+      <module name="license-project" target="1.8" />
       <module name="license-web" target="1.8" />
-      <module name="tool-base" target="1.5" />
+      <module name="tool-base" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
