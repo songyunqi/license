@@ -1,6 +1,9 @@
 package com.foo.base.controller;
 
-public interface DDController<TRequest, TResponse> {
+import com.foo.base.request.ARequest;
+import com.foo.base.response.AResponse;
+
+public interface DDController<TRequest extends ARequest, TResponse extends AResponse> {
 
     TResponse doSave(TRequest t);
 
