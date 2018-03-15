@@ -4,7 +4,6 @@
     <list default="true" id="648787ed-6d4a-4f45-809f-bc2b43d8df38" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/license-project/target/classes/com/wanmi/license/project/controller/ProjectController.class" afterPath="$PROJECT_DIR$/license-project/target/classes/com/wanmi/license/project/controller/ProjectController.class" />
-      <change beforePath="$PROJECT_DIR$/license-web/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/license-web/src/main/resources/application.properties" />
       <change beforePath="$PROJECT_DIR$/tool-base/target/classes/com/foo/base/controller/AController.class" afterPath="$PROJECT_DIR$/tool-base/target/classes/com/foo/base/controller/AController.class" />
       <change beforePath="$PROJECT_DIR$/tool-base/target/classes/com/foo/base/controller/CController.class" afterPath="$PROJECT_DIR$/tool-base/target/classes/com/foo/base/controller/CController.class" />
       <change beforePath="$PROJECT_DIR$/tool-base/target/classes/com/foo/base/service/CService.class" afterPath="$PROJECT_DIR$/tool-base/target/classes/com/foo/base/service/CService.class" />
@@ -536,7 +535,7 @@
       <workItem from="1520491559348" duration="2225000" />
       <workItem from="1520577296470" duration="12473000" />
       <workItem from="1520825030281" duration="8074000" />
-      <workItem from="1520922095340" duration="22361000" />
+      <workItem from="1520922095340" duration="22391000" />
     </task>
     <task id="LOCAL-00001" summary="Xx">
       <created>1520502204799</created>
@@ -685,11 +684,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521093824759</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Xx">
+      <created>1521095081759</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1521095081759</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84161000" />
+    <option name="totallyTimeSpent" value="84191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
