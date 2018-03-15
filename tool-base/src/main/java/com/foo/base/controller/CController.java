@@ -47,8 +47,8 @@ public abstract class CController<TRequest extends ARequest, TResponse extends A
 
     @RequestMapping("statics")
     @ResponseBody
-    public TResponse statis(TRequest request) {
-        TResponse response = doStatis(request);
+    public TResponse statics(TRequest request) {
+        TResponse response = doStatics(request);
         return response;
     }
 

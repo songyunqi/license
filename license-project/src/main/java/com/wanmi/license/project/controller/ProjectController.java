@@ -22,7 +22,7 @@ public class ProjectController extends CController<ProjectRequest, AResponse> {
     @Autowired
     ProjectService projectService;
 
-    public AResponse doStatis(ProjectRequest request) {
+    public AResponse doStatics(ProjectRequest request) {
         return null;
     }
 

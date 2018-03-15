@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("parameter")
 public class LicenseParameterController extends CController<LicenseParameterRequest, AResponse> {
 
-    public AResponse doStatis(LicenseParameterRequest licenseParameterRequest) {
+    public AResponse doStatics(LicenseParameterRequest licenseParameterRequest) {
         return null;
     }
 
