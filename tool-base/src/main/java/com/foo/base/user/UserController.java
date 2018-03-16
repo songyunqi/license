@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("user")
 public class UserController extends CController<UserRequest, AResponse> {
 
-    public AResponse doStatis(UserRequest userRequest) {
+    public AResponse doStatics(UserRequest userRequest) {
         return null;
     }
 

@@ -55,11 +55,7 @@ public class ProjectController extends CController<ProjectRequest, AResponse> {
     }
 
     public AResponse doPage(final ProjectRequest request) {
-        PageInfo<Project> page = projectService.page(request, new ISelect() {
-            public void doSelect() {
-                projectService.selectProjectCount(request);
-            }
-        });
+        PageInfo<Project> page = projectService.page(request);
         return AResponse.builder().content(page).build();
     }
 
