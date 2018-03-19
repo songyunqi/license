@@ -42,7 +42,7 @@ App.directive('pagenation',function(){
 				var page = scope.page.number;
 				var size = scope.page.size;
 				if(scope.page&&scope.page.pagefunction){
-					scope.page.pagefunction(0,size);
+					scope.page.pagefunction(1,size);
 				}
 				element.find('.pagenum').val('');
 			});

@@ -14,6 +14,7 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
                 $scope.page.sort = data.content.sort;
                 $scope.page.totalElements = data.content.total;
                 $scope.page.totalPages = data.content.pages;
+                $scope.page.pages = data.content.pages;
             });
 
             $scope.page.url = $projectSvc.list_url;
@@ -40,6 +41,7 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
                         $scope.page.sort = data.content.sort;
                         $scope.page.totalElements = data.content.total;
                         $scope.page.totalPages = data.content.pages;
+                        $scope.page.pages = data.content.pages;
                     });
                 }, function (data) {
 
