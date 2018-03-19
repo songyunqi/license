@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="648787ed-6d4a-4f45-809f-bc2b43d8df38" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/license-web/src/main/resources/kstore_license-0.0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/license-web/src/main/resources/kstore_license-0.0.1-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/license-web/src/main/resources/static/app/directives.js" afterPath="$PROJECT_DIR$/license-web/src/main/resources/static/app/directives.js" />
+      <change beforePath="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectCtrl.js" afterPath="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectCtrl.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,40 +23,78 @@
       <file leaf-file-name="ProjectController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/ProjectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="621">
+              <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/mapper/ProjectMapper.java">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="27" />
+            <state relative-caret-position="743">
+              <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/service/ProjectService.java">
+      <file leaf-file-name="directives.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/directives.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="41" column="45" lean-forward="true" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+              <folding>
+                <marker date="1521454081278" expanded="true" signature="360:373" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="427:489" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="594:600" ph="&amp;nbsp;" />
+                <marker date="1521454081278" expanded="true" signature="600:606" ph="&amp;nbsp;" />
+                <marker date="1521454081278" expanded="true" signature="631:693" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="740:773" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="862:877" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="997:1012" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="1181:1196" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="1314:1329" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="1400:1406" ph="&amp;nbsp;" />
+                <marker date="1521454081278" expanded="true" signature="1406:1412" ph="&amp;nbsp;" />
+                <marker date="1521454081278" expanded="true" signature="1437:1499" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="1532:1538" ph="&amp;nbsp;" />
+                <marker date="1521454081278" expanded="true" signature="1595:1607" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="1609:1615" ph="&amp;nbsp;" />
+                <marker date="1521454081278" expanded="true" signature="1644:1650" ph="&amp;nbsp;" />
+                <marker date="1521454081278" expanded="true" signature="1650:1656" ph="&amp;nbsp;" />
+                <marker date="1521454081278" expanded="true" signature="3930:3943" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="3971:4033" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="4102:4108" ph="&amp;nbsp;" />
+                <marker date="1521454081278" expanded="true" signature="4108:4114" ph="&amp;nbsp;" />
+                <marker date="1521454081278" expanded="true" signature="4139:4201" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="4248:4281" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="4370:4385" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="4505:4520" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="4691:4706" ph="..." />
+                <marker date="1521454081278" expanded="true" signature="4824:4839" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="114" column="60" lean-forward="true" selection-start-line="114" selection-start-column="60" selection-end-line="114" selection-end-column="60" />
-              <folding>
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#924#925#0" expanded="true" />
-                <element signature="e#964#965#0" expanded="true" />
-                <element signature="e#988#989#0" expanded="true" />
-                <element signature="e#1031#1032#0" expanded="true" />
-                <element signature="e#1055#1056#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
-                <element signature="e#1174#1175#0" expanded="true" />
-                <element signature="e#1198#1199#0" expanded="true" />
-              </folding>
+              <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="67" column="50" lean-forward="false" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,6 +124,7 @@
       <find>directives</find>
       <find>t_project</find>
       <find>doPage</find>
+      <find>pageNum</find>
     </findStrings>
     <replaceStrings>
       <replace>t_project.</replace>
@@ -139,8 +179,6 @@
         <option value="$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/request/ProjectRequest.java" />
         <option value="$PROJECT_DIR$/license-web/src/main/resources/templates/index.htm" />
         <option value="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectSvc.js" />
-        <option value="$PROJECT_DIR$/license-web/src/main/resources/static/app/directives.js" />
-        <option value="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectCtrl.js" />
         <option value="$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm" />
         <option value="$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/mapper/ProjectMapper.java" />
         <option value="$PROJECT_DIR$/license-project/src/main/resources/com/wanmi/license/project/ProjectMapper.xml" />
@@ -158,6 +196,8 @@
         <option value="$PROJECT_DIR$/tool-base/src/main/java/com/foo/base/user/UserController.java" />
         <option value="$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/LicenseParameterController.java" />
         <option value="$PROJECT_DIR$/license-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectCtrl.js" />
+        <option value="$PROJECT_DIR$/license-web/src/main/resources/static/app/directives.js" />
       </list>
     </option>
   </component>
@@ -195,8 +235,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1680" />
-    <option name="height" value="1040" />
+    <option name="x" value="895" />
+    <option name="y" value="17" />
+    <option name="width" value="1161" />
+    <option name="height" value="896" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -222,32 +264,6 @@
             <path>
               <item name="license-all" type="b2602c69:ProjectViewProjectNode" />
               <item name="license-all" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="license-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="license-all" type="462c0819:PsiDirectoryNode" />
-              <item name="license-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="license-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="license-all" type="462c0819:PsiDirectoryNode" />
-              <item name="license-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="license-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="license-all" type="462c0819:PsiDirectoryNode" />
-              <item name="license-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="license-all" type="b2602c69:ProjectViewProjectNode" />
-              <item name="license-all" type="462c0819:PsiDirectoryNode" />
-              <item name="license-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -431,7 +447,7 @@
       <workItem from="1520922095340" duration="28823000" />
       <workItem from="1521167271325" duration="23000" />
       <workItem from="1521192196707" duration="766000" />
-      <workItem from="1521424996231" duration="819000" />
+      <workItem from="1521424996231" duration="9482000" />
     </task>
     <task id="LOCAL-00001" summary="Xx">
       <created>1520502204799</created>
@@ -594,17 +610,24 @@
       <option name="project" value="LOCAL" />
       <updated>1521095108835</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Xx">
+      <created>1521426094593</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1521426094593</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92231000" />
+    <option name="totallyTimeSpent" value="100894000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23586957" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4271739" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08155651" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -614,16 +637,17 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3257329" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4021739" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23586957" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2902174" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4271739" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3767644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20682302" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21375267" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -633,13 +657,38 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -655,13 +704,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.4.RELEASE/spring-web-4.3.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/license-project/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -712,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="15" column="74" lean-forward="true" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.0.1/pagehelper-5.0.1-sources.jar!/com/github/pagehelper/PageInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -726,24 +761,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="62" lean-forward="true" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectSvc.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -774,15 +795,15 @@
         <state relative-caret-position="261">
           <caret line="21" column="19" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="21" selection-end-column="19" />
           <folding>
-            <marker date="1520834002510" expanded="true" signature="952:1015" ph="select count... t_license_project" />
-            <marker date="1520834002510" expanded="true" signature="1153:1254" ph="SELECT , FRO... " />
-            <marker date="1520834002510" expanded="true" signature="1153:1467" ph="SELECT FROM t_license_project" />
-            <marker date="1520834002510" expanded="true" signature="1606:1707" ph="SELECT FROM t_license_project" />
-            <marker date="1520834002510" expanded="true" signature="1606:1720" ph="SELECT FROM t_license_project" />
-            <marker date="1520834002510" expanded="true" signature="1606:1722" ph="SELECT FROM t_license_project" />
-            <marker date="1520834002510" expanded="true" signature="1606:1732" ph="SELECT FROM t_license_project" />
-            <marker date="1520834002510" expanded="true" signature="1836:1860" ph="update t_license_project... " />
-            <marker date="1520834002510" expanded="true" signature="1836:2593" ph="update t_license_project... " />
+            <marker date="1521450887508" expanded="true" signature="952:1015" ph="select count... t_license_project" />
+            <marker date="1521450887508" expanded="true" signature="1153:1254" ph="SELECT , FRO... " />
+            <marker date="1521450887508" expanded="true" signature="1153:1467" ph="SELECT FROM t_license_project" />
+            <marker date="1521450887508" expanded="true" signature="1606:1707" ph="SELECT FROM t_license_project" />
+            <marker date="1521450887508" expanded="true" signature="1606:1720" ph="SELECT FROM t_license_project" />
+            <marker date="1521450887508" expanded="true" signature="1606:1722" ph="SELECT FROM t_license_project" />
+            <marker date="1521450887508" expanded="true" signature="1606:1732" ph="SELECT FROM t_license_project" />
+            <marker date="1521450887508" expanded="true" signature="1836:1860" ph="update t_license_project... " />
+            <marker date="1521450887508" expanded="true" signature="1836:2593" ph="update t_license_project... " />
           </folding>
         </state>
       </provider>
@@ -846,8 +867,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/controller/ProjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state relative-caret-position="621">
+          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -912,21 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-web/src/main/java/com/wanmi/license/web/BootApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1021,19 +1027,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/license-project/src/main/java/com/wanmi/license/project/service/ProjectService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="114" column="60" lean-forward="true" selection-start-line="114" selection-start-column="60" selection-end-line="114" selection-end-column="60" />
+        <state relative-caret-position="54">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-project/target/classes/com/wanmi/license/project/LicenseParameterMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
           <folding>
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
+            <marker date="1521451558761" expanded="true" signature="1420:1563" ph="SELECT FROM t_license_parameter" />
+            <marker date="1521451558761" expanded="true" signature="1716:1982" ph="insert into t_license_parameter... " />
+            <marker date="1521451558761" expanded="true" signature="2102:2417" ph="update t_license_parameter... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/java/com/wanmi/license/web/BootApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/templates/project/list.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="67" column="50" lean-forward="false" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/project/ProjectCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license-web/src/main/resources/static/app/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="41" column="45" lean-forward="true" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+          <folding>
+            <marker date="1521454081278" expanded="true" signature="360:373" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="427:489" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="594:600" ph="&amp;nbsp;" />
+            <marker date="1521454081278" expanded="true" signature="600:606" ph="&amp;nbsp;" />
+            <marker date="1521454081278" expanded="true" signature="631:693" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="740:773" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="862:877" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="997:1012" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="1181:1196" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="1314:1329" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="1400:1406" ph="&amp;nbsp;" />
+            <marker date="1521454081278" expanded="true" signature="1406:1412" ph="&amp;nbsp;" />
+            <marker date="1521454081278" expanded="true" signature="1437:1499" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="1532:1538" ph="&amp;nbsp;" />
+            <marker date="1521454081278" expanded="true" signature="1595:1607" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="1609:1615" ph="&amp;nbsp;" />
+            <marker date="1521454081278" expanded="true" signature="1644:1650" ph="&amp;nbsp;" />
+            <marker date="1521454081278" expanded="true" signature="1650:1656" ph="&amp;nbsp;" />
+            <marker date="1521454081278" expanded="true" signature="3930:3943" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="3971:4033" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="4102:4108" ph="&amp;nbsp;" />
+            <marker date="1521454081278" expanded="true" signature="4108:4114" ph="&amp;nbsp;" />
+            <marker date="1521454081278" expanded="true" signature="4139:4201" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="4248:4281" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="4370:4385" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="4505:4520" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="4691:4706" ph="..." />
+            <marker date="1521454081278" expanded="true" signature="4824:4839" ph="..." />
           </folding>
         </state>
       </provider>

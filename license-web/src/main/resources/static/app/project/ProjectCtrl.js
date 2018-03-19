@@ -5,7 +5,15 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
         defer.done(function (data) {
             //$scope.ap
             $scope.$apply(function () {
-                $scope.page = data.content;
+                $scope.page.list = data.content.list;
+                $scope.page.first = data.content.isFirstPage;
+                $scope.page.last = data.content.isLastPage;
+                $scope.page.number = data.content.pageNum;
+                $scope.page.size = data.content.pageSize;
+                $scope.page.numberOfElements = data.content.numberOfElements;
+                $scope.page.sort = data.content.sort;
+                $scope.page.totalElements = data.content.total;
+                $scope.page.totalPages = data.content.pages;
             });
 
             $scope.page.url = $projectSvc.list_url;
@@ -21,15 +29,18 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
                     }
                 });
                 deferred.done(function (data) {
-                    $scope.page.content = data.content;
-                    $scope.page.first = data.first;
-                    $scope.page.last = data.last;
-                    $scope.page.number = data.number;
-                    $scope.page.numberOfElements = data.numberOfElements;
-                    $scope.page.size = data.size;
-                    $scope.page.sort = data.sort;
-                    $scope.page.totalElements = data.totalElements;
-                    $scope.page.totalPages = data.totalPages;
+
+                    $scope.$apply(function () {
+                        $scope.page.list = data.content.list;
+                        $scope.page.first = data.content.isFirstPage;
+                        $scope.page.last = data.content.isLastPage;
+                        $scope.page.number = data.content.pageNum;
+                        $scope.page.size = data.content.pageSize;
+                        $scope.page.numberOfElements = data.content.numberOfElements;
+                        $scope.page.sort = data.content.sort;
+                        $scope.page.totalElements = data.content.total;
+                        $scope.page.totalPages = data.content.pages;
+                    });
                 }, function (data) {
 
                 });

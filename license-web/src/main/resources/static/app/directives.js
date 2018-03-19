@@ -21,7 +21,7 @@ App.directive('pagenation',function(){
 				+	      '<ul class="pagination" style="margin-left:4px;margin-right:4px;">'
 				+	          '<li ng-class="{true: \'disabled\', false: \'\'}[page.first]" style="cursor:pointer;"><a class="firstpage">«</a></li>'
 				+	          '<li ng-class="{true: \'disabled\', false: \'\'}[page.first]" style="cursor:pointer;"><a class="prepage">‹</a></li>'
-				+	          '<li><a>{{(page.pageNum)}}</a></li>'
+				+	          '<li><a>{{(page.number)}}</a></li>'
 				+	          '<li ng-class="{true: \'disabled\', false: \'\'}[page.last]" style="cursor:pointer;"><a class="nextpage">›</a></li>'
 				+	          '<li ng-class="{true: \'disabled\', false: \'\'}[page.last]" style="cursor:pointer;"><a class="lastpage">»</a></li>'
 				+	      '</ul>'
@@ -36,11 +36,11 @@ App.directive('pagenation',function(){
 		link:function(scope,element,attrs){
 			element.find('.firstpage').bind('click',function(){
 				if(!scope.page){return;}
-				if(scope.page.isFirstPage){
+				if(scope.page.first){
 					return;
 				}
-				var page = scope.page.pageNum;
-				var size = scope.page.pageSize;
+				var page = scope.page.number;
+				var size = scope.page.size;
 				if(scope.page&&scope.page.pagefunction){
 					scope.page.pagefunction(0,size);
 				}
@@ -48,11 +48,11 @@ App.directive('pagenation',function(){
 			});
 			element.find('.prepage').bind('click',function(){
 				if(!scope.page){return;}
-				if(scope.page.isFirstPage){
+				if(scope.page.first){
 					return;
 				}//pre
-				var page = scope.page.pageNum==1?1:(scope.page.pageNum-1);
-				var size = scope.page.pageSize;
+				var page = scope.page.number==1?1:(scope.page.number-1);
+				var size = scope.page.size;
 				if(page>=0){
 					scope.page.pagefunction(page,size);
 				}
@@ -60,11 +60,11 @@ App.directive('pagenation',function(){
 			});
 			element.find('.nextpage').bind('click',function(){
 				if(!scope.page){return;}
-				if(scope.page.isLastPage){
+				if(scope.page.last){
 					return;
 				}//next
-				var page = (!scope.page.isLastPage)?(scope.page.number+1):(scope.page.pages);
-				var size = scope.page.pageSize;
+				var page = (!scope.page.last)?(scope.page.number+1):(scope.page.pages);
+				var size = scope.page.size;
 				if(scope.page&&scope.page.pagefunction){
 					scope.page.pagefunction(page,size);
 				}
@@ -72,11 +72,11 @@ App.directive('pagenation',function(){
 			});
 			element.find('.lastpage').bind('click',function(){
 				if(!scope.page){return;}
-				if(scope.page.isLastPage){
+				if(scope.page.last){
 					return;
 				}//last
 				var page = scope.page.pages;
-				var size = scope.page.pageSize;
+				var size = scope.page.size;
 				if(scope.page&&scope.page.pagefunction){
 					scope.page.pagefunction(page,size);
 				}
@@ -94,7 +94,7 @@ App.directive('pagenation',function(){
 					return;
 				}
 				var page = (pagenum>scope.page.pages)?scope.page.pages:pagenum;
-				var size = scope.page.pageSize;
+				var size = scope.page.size;
 				if(scope.page&&scope.page.pagefunction){
 					scope.page.pagefunction((page-1),size);
 				}
