@@ -33,29 +33,33 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
     public int save(Project project) {
 
         if (project.getId() != null) {
-            projectMapper.save(project);
-        } else {
             projectMapper.updateById(project);
+        } else {
+            projectMapper.save(project);
         }
 
+        int res = 0;
         try {
-            initProject(project);
+            res = initProject(project);
         } catch (IOException e) {
             e.printStackTrace();
             return 0;
         }
 
-        return 1;
+        return res;
     }
 
+    @Override
     public int delete(List<Long> longs) {
         return 0;
     }
 
+    @Override
     public int update(List<Project> list) {
         return 0;
     }
 
+    @Override
     public int batchImport(List<Project> list) {
         return 0;
     }
@@ -69,23 +73,32 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         String artifactId = project.getArtifactId();
 
         StringBuilder cmd = new StringBuilder();
-        String osName = System.getProperty("os.name" );
+        String osName = System.getProperty("os.name");
         String dir;
         String fileName = "";
-        if(osName.indexOf("Windows")>-1){
+        if (osName.indexOf("Windows") > -1) {
             System.out.println(windowDir);
             dir = windowDir;
             fileName = "license.bat";
-        }else{
+        } else {
             dir = LiunxDir;
             fileName = "license.sh";
         }
 
         File file = new File(dir);
-        if(!file.exists()){
+        if (!file.exists()) {
             file.mkdir();
         }
-        cmd.append(" cd "+dir);
+
+        String newPoj = dir + File.separator + artifactId;
+        File newPojFile = new File(newPoj);
+        //项目名已经存在
+        if (newPojFile.exists()) {
+            return 3;
+        }
+
+        //生成pom文件
+        cmd.append(" cd " + dir);
         cmd.append("\n");
         cmd.append(" mvn archetype:generate -B ");
         cmd.append(" -DarchetypeArtifactId=truelicense-maven-archetype");
@@ -98,13 +111,34 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         cmd.append(" -DlicensingSubject=").append("\"").append(licensingSubject).append("\"");
         cmd.append(" -Dversion=1.0-SNAPSHOT");
 
-        String fileDir = dir+File.separator+fileName;
+        String fileDir = dir + File.separator + fileName;
         file = new File(fileDir);
         BufferedWriter out = new BufferedWriter(new FileWriter(file));
         out.write(cmd.toString());
         out.close();
 
-//        ProcessBuilder builder = new ProcessBuilder();
+        exec(fileDir);
+
+        //打jar包
+        cmd.delete(0, cmd.length());
+        cmd.append(" cd " + dir + File.separator + artifactId);
+        cmd.append("\n");
+        cmd.append(" mvn clean install -Dmaven.test.skip=true -Dmaven.javadoc.skip=true");
+
+        out = new BufferedWriter(new FileWriter(file));
+        out.write(cmd.toString());
+        out.close();
+
+        exec(fileDir);
+
+        file.delete();
+
+        System.out.println("请到 "+newPoj+" 目录下拷贝对应的jar包");
+        return 1;
+    }
+
+
+    private void exec(String fileDir) throws IOException {
         Runtime runtime = Runtime.getRuntime();
         Process process = runtime.exec(fileDir);
         InputStream inputStream = process.getInputStream();
@@ -113,9 +147,6 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         while ((line = br.readLine()) != null) {
             System.out.println(line);
         }
-
-        file.delete();
-        return 0;
     }
 
     public void genLicense(Project project, LicenseParameter parameters) throws IOException {
@@ -158,27 +189,27 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
 
     public static void main(String[] args) throws IOException {
         StringBuilder cmd = new StringBuilder();
-        String osName = System.getProperty("os.name" );
+        String osName = System.getProperty("os.name");
         String dir;
         String fileName = "";
-        if(osName.indexOf("Windows")>=0){
+        if (osName.indexOf("Windows") >= 0) {
             dir = "E:\\";
             fileName = "license.bat";
-        }else{
+        } else {
             dir = "/data/";
             fileName = "license.sh";
         }
 
         File file = new File(dir);
-        if(!file.exists()){
+        if (!file.exists()) {
             file.mkdir();
         }
 
 
-        cmd.append("cd "+dir);
+        cmd.append("cd " + dir);
         cmd.append("\n");
         cmd.append(" ping wwww.baidu.com");
-        String fileDir = dir+File.separator+fileName;
+        String fileDir = dir + File.separator + fileName;
         file = new File(fileDir);
 
         BufferedWriter out = new BufferedWriter(new FileWriter(fileDir));

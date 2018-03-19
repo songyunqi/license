@@ -150,10 +150,14 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
     };
 
 
+    var flag = false;
     $scope.saveProject = function(){
-        if(!$scope.myProject.$valid){
+
+        if(!$scope.myProject.$valid||flag){
             return;
         }
+
+        flag = true;
 
         $.ajax({
             type: "POST",
@@ -161,10 +165,13 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
             dataType: 'json',
             data:$scope.t_project
         }).done(function(data){
+            flag = false;
             console.log(data.content);
             if(data.content&&data.content=='1'){
                 $('#commentModal').modal('hide');
-                alert("数据保存成功");
+                alert("jar包打包成功");
+            }else if(data.content&&data.content=='3'){
+                alert("构件Id(artifactId) 已经存在需要手动删除磁盘上生成的文件！");
             }else{
                 alert("数据保存失败");
             }

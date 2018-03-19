@@ -33,6 +33,11 @@ public class ProjectController extends CController<ProjectRequest, AResponse> {
         return null;
     }
 
+    @Override
+    public AResponse doStatics(ProjectRequest projectRequest) {
+        return null;
+    }
+
     public AResponse doBatchImport(ProjectRequest request) {
         return null;
     }
