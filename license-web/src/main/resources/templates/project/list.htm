@@ -20,10 +20,10 @@
                         <h3 class="box-title">项目</h3>
                         <div class="box-tools">
                             <div class="input-group" style="width:200px;">
-                                <input type="text" name="table_search" class="form-control input-sm pull-right"
+                                <input type="text" id="table_search" name="table_search" class="form-control input-sm pull-right"
                                        ng-model="keyword" placeholder="关键字">
                                 <div class="input-group-btn">
-                                    <button class="btn btn-sm btn-primary" ng-click="search();">
+                                    <button class="btn btn-sm btn-primary" ng-click="search('');">
                                         <li class="fa fa-search"></li>
                                     </button>
                                     <button class="btn btn-sm btn-primary" ng-click="addpty();">
@@ -162,13 +162,14 @@
                                    required="required">
                         </div>
                     </div>
+                    <!--
                     <div class="form-group">
                         <label class="col-sm-3 control-label">主体</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="subject"
                                    ng-model="prjParams.subject" required="required">
                         </div>
-                    </div>
+                    </div>-->
                     <div class="form-group">
                         <label class="col-sm-3 control-label">不早于</label>
                         <div class="col-sm-6">
@@ -205,10 +206,10 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">扩展项3</label>
+                        <label class="col-sm-3 control-label">MAC地址（多个使用,号分隔）</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="extra3"
-                                   ng-model="prjParams.extra3" >
+                            <input type="text" class="form-control" id="macAddress"
+                                   ng-model="prjParams.macAddress" >
                         </div>
                     </div>
                 </div>

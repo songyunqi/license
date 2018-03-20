@@ -67,13 +67,19 @@
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.1.1</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>mybatis-spring-boot-starter</artifactId>
+                    <groupId>org.mybatis.spring.boot</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
+<!--
         <dependency>
             <groupId>com</groupId>
             <artifactId>druid</artifactId>
             <version>1.0.9</version>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 </project>

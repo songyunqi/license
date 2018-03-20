@@ -4,16 +4,12 @@ import com.foo.base.service.CService;
 import com.wanmi.license.project.domain.LicenseParameter;
 import com.wanmi.license.project.domain.Project;
 import com.wanmi.license.project.mapper.LicenseParameterMapper;
-import com.wanmi.license.project.mapper.ProjectMapper;
 import com.wanmi.license.project.request.LicenseParameterRequest;
-import com.wanmi.license.project.request.ProjectRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.List;
 
 @Service
@@ -21,6 +17,9 @@ public class ProjectParamsService extends CService<LicenseParameter, Long, Licen
 
     @Autowired
     LicenseParameterMapper licenseParameterMapper;
+
+    @Autowired
+    private ProjectService projectService;
 
     public LicenseParameter getOne(Long aLong) {
         return licenseParameterMapper.getOne(aLong);
@@ -30,12 +29,23 @@ public class ProjectParamsService extends CService<LicenseParameter, Long, Licen
         return licenseParameterMapper.selectByProjectId(aLong);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public int save(LicenseParameter licenseParameter) {
+        Project project = projectService.getOne(licenseParameter.getProjectId());
+
+        licenseParameter.setSubject(project.getLicensingSubject());
 
         if(licenseParameter.getId()!=null){
             licenseParameterMapper.updateById(licenseParameter);
         }else{
             licenseParameterMapper.save(licenseParameter);
+        }
+
+        try {
+            projectService.genLicense(project, licenseParameter);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return 0;
         }
 
         return 1;

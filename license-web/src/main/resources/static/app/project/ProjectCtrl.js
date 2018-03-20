@@ -77,10 +77,14 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
         "extra":"",
         "extra1":"",
         "extra2":"",
-        "extra3":""
+        "macAddress":""
     };
 
     $scope.page = {'content': {}};
+
+    $scope.search = function(){
+        search($("#table_search").val());
+    };
 
     $scope.addpty = function () {
         $('#commentModal').modal('show');
@@ -119,7 +123,7 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
                     var ext = JSON.parse($scope.prjParams.extra);
                     $scope.prjParams.extra1 = ext.extra1;
                     $scope.prjParams.extra2 = ext.extra2;
-                    $scope.prjParams.extra3 = ext.extra3;
+                    $scope.prjParams.macAddress = ext.macAddress;
                 }
             }
             $scope.prjParams.projectId = prj.id;
@@ -138,7 +142,7 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
 
         var ext = {extra1:$scope.prjParams.extra1,
             extra2:$scope.prjParams.extra2,
-            extra3:$scope.prjParams.extra3
+            macAddress:$scope.prjParams.macAddress
         };
 
         $scope.prjParams.extra = JSON.stringify(ext);
@@ -182,6 +186,7 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
             console.log(data.content);
             if(data.content&&data.content=='1'){
                 $('#commentModal').modal('hide');
+                search($("#table_search").val());
                 alert("jar包打包成功");
             }else if(data.content&&data.content=='3'){
                 alert("构件Id(artifactId) 已经存在需要手动删除磁盘上生成的文件！");
