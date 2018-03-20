@@ -96,7 +96,7 @@ App.directive('pagenation',function(){
 				var page = (pagenum>scope.page.pages)?scope.page.pages:pagenum;
 				var size = scope.page.size;
 				if(scope.page&&scope.page.pagefunction){
-					scope.page.pagefunction((page-1),size);
+					scope.page.pagefunction((page),size);
 				}
 				if(pagenum>scope.page.pages){
 					element.find('.pagenum').val(scope.page.pages);
