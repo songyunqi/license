@@ -257,7 +257,7 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         FileUtil.write2File(inputStream, newFileJar);
 
         String licFile = dir + File.separator + companyName + ".license";
-        String newLicFile = jarDir + File.separator + companyName + ".license";
+        String newLicFile = jarDir + File.separator + "wm.license";
         inputStream = new FileInputStream(licFile);
         FileUtil.write2File(inputStream, newLicFile);
 
