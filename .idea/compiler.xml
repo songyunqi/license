@@ -6,13 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="license-keygen" />
+        <module name="license-keymgr" />
+        <module name="license-keymgrsvc" />
         <module name="license-project" />
         <module name="license-web" />
         <module name="tool-base" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="license" target="1.8" />
       <module name="license-all" target="1.8" />
+      <module name="license-keygen" target="1.8" />
+      <module name="license-keymgr" target="1.8" />
+      <module name="license-keymgrsvc" target="1.8" />
       <module name="license-project" target="1.8" />
       <module name="license-web" target="1.8" />
       <module name="tool-base" target="1.8" />
