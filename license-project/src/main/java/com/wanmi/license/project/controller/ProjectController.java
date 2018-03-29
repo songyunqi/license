@@ -29,10 +29,6 @@ public class ProjectController extends CController<ProjectRequest, AResponse> {
     @Autowired
     ProjectParamsService projectParamsService;
 
-    public AResponse doStatis(ProjectRequest request) {
-        return null;
-    }
-
     @Override
     public AResponse doStatics(ProjectRequest projectRequest) {
         return null;
