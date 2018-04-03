@@ -56,7 +56,7 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
     $scope.init();
 
     $scope.t_project = {
-        "groupId": "com.wanmi",
+        "groupId": "com.wm",
         "artifactId": "license",
         "companyName": "",
         "defaultPassword": "",
@@ -87,6 +87,13 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
     };
 
     $scope.addpty = function () {
+        $scope.t_project = {
+            "groupId": "com.wm",
+            "artifactId": "license",
+            "companyName": "",
+            "defaultPassword": "",
+            "licensingSubject": "",
+        };
         $('#commentModal').modal('show');
     };
 
