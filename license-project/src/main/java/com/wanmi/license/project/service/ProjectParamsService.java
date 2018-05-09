@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class ProjectParamsService extends CService<LicenseParameter, Long, LicenseParameterRequest> {
@@ -33,9 +34,12 @@ public class ProjectParamsService extends CService<LicenseParameter, Long, Licen
     public int save(LicenseParameter licenseParameter) {
         Project project = projectService.getOne(licenseParameter.getProjectId());
 
+        LicenseParameter oldParameter = this.getOneByProjectId(licenseParameter.getProjectId());
+
         licenseParameter.setSubject(project.getLicensingSubject());
 
-        if(licenseParameter.getId()!=null){
+        if(Objects.nonNull(oldParameter)){
+            licenseParameter.setId(oldParameter.getId());
             licenseParameterMapper.updateById(licenseParameter);
         }else{
             licenseParameterMapper.save(licenseParameter);

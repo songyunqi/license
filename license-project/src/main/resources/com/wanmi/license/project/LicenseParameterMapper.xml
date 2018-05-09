@@ -22,8 +22,8 @@
     <sql id="baseColumns">
         id,project_id,consumer_amount,consumer_type,holder,issuer,
         subject, info,extra,
-        DATE_FORMAT(notBefore,   '%Y-%m-%d %H:%i:%S')  as notBefore,
-        DATE_FORMAT(notAfter,   '%Y-%m-%d %H:%i:%S')  as notAfter
+        DATE_FORMAT(notBefore,   '%Y-%m-%d')  as notBefore,
+        DATE_FORMAT(notAfter,   '%Y-%m-%d')  as notAfter
     </sql>
 
     <!--公用whereSql-->
