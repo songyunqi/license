@@ -94,15 +94,17 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
             file.mkdir();
         }
 
-        String newPoj = dir + File.separator + artifactId;
+        String newPoj = dir + File.separator + companyName;
         File newPojFile = new File(newPoj);
         //项目名已经存在
         if (newPojFile.exists()) {
             return 3;
         }
 
+        newPojFile.mkdirs();
+
         //生成pom文件
-        cmd.append(" cd " + dir);
+        cmd.append(" cd " + newPoj);
         cmd.append("\n");
         cmd.append(" mvn archetype:generate -B ");
         cmd.append(" -DarchetypeArtifactId=truelicense-maven-archetype");
@@ -115,7 +117,7 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         cmd.append(" -DlicensingSubject=").append("\"").append(licensingSubject).append("\"");
         cmd.append(" -Dversion=1.0-SNAPSHOT");
 
-        String fileDir = dir + File.separator + fileName;
+        String fileDir = dir + File.separator + companyName + File.separator + fileName;
         file = new File(fileDir);
         writerShell(cmd, file);
         System.out.println("cmd--->" + cmd);
@@ -124,7 +126,7 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
 
         //打jar包
         cmd.delete(0, cmd.length());
-        cmd.append(" cd " + dir + File.separator + artifactId);
+        cmd.append(" cd " + newPoj + File.separator + artifactId);
         cmd.append("\n");
         cmd.append(" mvn clean install -Pintegration-test ");
 
@@ -172,7 +174,7 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         String artifactId = project.getArtifactId();
         String companyName = project.getCompanyName();
 
-        String filePath = genLicenseInitFile(parameters);
+        String filePath = genLicenseInitFile(parameters, companyName);
         StringBuilder cmd = new StringBuilder();
         String osName = System.getProperty("os.name");
         String dir;
@@ -186,7 +188,7 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         }
 
         //license文件生成在 dir 目录下
-        cmd.append("cd " + dir);
+        cmd.append("cd " + dir + "/" + companyName);
         cmd.append(" \n");
         cmd.append(" java -jar ");
         cmd.append(artifactId + "/").append(artifactId).append("-keygen/target/").append(artifactId).append("-keygen-1.0-SNAPSHOT-standalone.jar");
@@ -194,14 +196,14 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         cmd.append(" -verbose true");
         cmd.append(" -input ").append(filePath);
 
-        File shellFile = new File(dir + fileName);
+        File shellFile = new File(dir + File.separator + fileName);
         writerShell(cmd, shellFile);
 
 
         //license 文件生成后再生成jar包
 
         //创建jar打包文件夹
-        String jarDir = dir + File.separator + "jar";
+        String jarDir = dir + File.separator + companyName + File.separator + "jar";
         File directory = new File(jarDir);
 
         //删除jar 文件
@@ -249,12 +251,12 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         }
 
         //copy jar到lib文件夹
-        String fileJar = dir + File.separator + artifactId + File.separator + artifactId + "-keymgr" + File.separator + "target" + File.separator + artifactId + "-keymgr-1.0-SNAPSHOT-standalone.jar";
+        String fileJar = dir + File.separator + companyName + File.separator + artifactId +  File.separator + artifactId + "-keymgr" + File.separator + "target" + File.separator + artifactId + "-keymgr-1.0-SNAPSHOT-standalone.jar";
         String newFileJar = jarDir + File.separator + "lib" + File.separator + artifactId + "-keymgr-1.0-SNAPSHOT-standalone.jar";
         InputStream inputStream = new FileInputStream(fileJar);
         FileUtil.write2File(inputStream, newFileJar);
 
-        String licFile = dir + File.separator + companyName + ".license";
+        String licFile = dir + File.separator + companyName + File.separator + companyName + ".license";
         String newLicFile = jarDir + File.separator + "wm.license";
         inputStream = new FileInputStream(licFile);
         FileUtil.write2File(inputStream, newLicFile);
@@ -270,7 +272,7 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
     }
 
 
-    public String genLicenseInitFile(LicenseParameter parameters) throws IOException {
+    public String genLicenseInitFile(LicenseParameter parameters, String companyName) throws IOException {
 
         String osName = System.getProperty("os.name");
         String dir;
@@ -283,7 +285,7 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
 
         parameters.setIssuer("CN="+parameters.getIssuer());
 
-        String fileDir =  dir + "/lic.txt";
+        String fileDir =  dir + File.separator + companyName + "/lic.txt";
         fileDir = fileDir.replace("\\", "/");
 
         File file = new File(fileDir);
@@ -301,10 +303,31 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
     }
 
     public static void main(String[] args) throws IOException {
-        String jarDir = "E:\\license\\jar\\test.txt";
+        ProjectService service = new ProjectService();
+        Project project = new Project();
+        project.setGroupId("com.wm");
+        project.setArtifactId("license");
+        project.setCompanyName("m3plan");
+        project.setDefaultPassword("m2plan520");
+        project.setLicensingSubject("developer");
+        service.initProject(project);
 
-        File directory = new File(jarDir);
-        directory.mkdir();
+
+        LicenseParameter parameters = new LicenseParameter();
+        parameters.setConsumerAmount(1);
+        parameters.setConsumerType("developer");
+        parameters.setIssuer("wm");
+        parameters.setNotBefore("2018-05-11");
+        parameters.setNotAfter("2018-05-12");
+        parameters.setInfo("ss");
+        parameters.setExtra("{\"extra1\":\"test\",\"extra2\":\"test1\",\"macAddress\":\"B0-83-FE-62-54-D2\"}");
+        parameters.setSubject("developer");
+        //service.genLicense(project, parameters);
+
+//        String jarDir = "E:\\license\\jar\\test.txt";
+//
+//        File directory = new File(jarDir);
+//        directory.mkdir();
 
 //        FileUtils.deleteQuietly(directory);
 
@@ -321,10 +344,10 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
 //        System.out.println(optFile.get().getName());
 //        optFile.get().delete();
 
-        LicenseParameter parameter = new LicenseParameter();
-        parameter.setId(1L);
-
-        System.out.println(JSON.toJSONString(parameter));
+//        LicenseParameter parameter = new LicenseParameter();
+//        parameter.setId(1L);
+//
+//        System.out.println(JSON.toJSONString(parameter));
 //
 //        String dir = "E:\\license";
 //        File directory = new File(dir);
