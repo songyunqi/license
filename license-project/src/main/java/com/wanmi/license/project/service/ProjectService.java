@@ -35,22 +35,20 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         return projectMapper.getOne(aLong);
     }
 
-    public int save(Project project) {
-
-        if (project.getId() != null) {
-            projectMapper.updateById(project);
-        } else {
-            projectMapper.save(project);
-        }
-
+    public int save(Project project)  {
         int res = 0;
         try {
             res = initProject(project);
+            if(res == 1) {
+                if (project.getId() != null) {
+                    projectMapper.updateById(project);
+                } else {
+                    projectMapper.save(project);
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
-            return 0;
         }
-
         return res;
     }
 
