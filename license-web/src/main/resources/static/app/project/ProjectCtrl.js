@@ -132,6 +132,8 @@ App.controller("ProjectController", ["$http", "$scope", "$q", "$state", "Project
                     $scope.prjParams.extra2 = ext.extra2;
                     $scope.prjParams.macAddress = ext.macAddress;
                 }
+            }else {
+                $scope.prjParams = {};
             }
             $scope.prjParams.projectId = prj.id;
             $scope.$apply();//需要手动刷新
