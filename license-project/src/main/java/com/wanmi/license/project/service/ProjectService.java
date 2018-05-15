@@ -146,6 +146,24 @@ public class ProjectService extends CService<Project, Long, ProjectRequest> {
         out.write(cmd.toString());
         out.close();
 
+        String osName = System.getProperty("os.name");
+
+        if (! (osName.indexOf("Windows") > -1)) {
+            System.out.println("执行权限");
+            Process process = Runtime.getRuntime().exec("chmod 777 ".concat(file.getCanonicalPath()));
+            InputStream inputStream = process.getInputStream();
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, "gb2312"));
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+            try {
+                process.waitFor();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
         exec(file.getCanonicalPath());
     }
 
