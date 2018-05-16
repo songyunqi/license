@@ -105,21 +105,22 @@
                         <label class="col-sm-3 control-label">客户名称(companyName)</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="companyName"
-                                   ng-model="t_project.companyName" required="required">
+                                   ng-model="t_project.companyName" required="required" maxlength="15">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">默认加密串</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="defaultPassword"
-                                   ng-model="t_project.defaultPassword" required="required">
+                                   ng-model="t_project.defaultPassword" required="required" minlength="8" maxlength="45">
                         </div>
+                        <p class="help-block">密码至少8位以上.</p>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">授权主体</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="licensingSubject"
-                                   ng-model="t_project.licensingSubject" required="required">
+                                   ng-model="t_project.licensingSubject" required="required" maxlength="45">
                         </div>
                     </div>
                 </div>
@@ -145,21 +146,21 @@
                         <label class="col-sm-3 control-label">客户数量</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="consumerAmount" ng-model="prjParams.consumerAmount"
-                                   required="required">
+                                   required="required" maxlength="6">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">客户类型</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="consumerType" ng-model="prjParams.consumerType"
-                                   required="required">
+                                   required="required" maxlength="10">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">发布者</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="issuer" ng-model="prjParams.issuer"
-                                   required="required">
+                                   required="required" maxlength="10">
                         </div>
                     </div>
                     <!--
@@ -188,21 +189,21 @@
                         <label class="col-sm-3 control-label">信息</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="info"
-                                   ng-model="prjParams.info" required="required">
+                                   ng-model="prjParams.info" required="required" maxlength="30">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">扩展项1</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="extra1"
-                                   ng-model="prjParams.extra1" >
+                                   ng-model="prjParams.extra1" maxlength="20">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">扩展项2</label>
                         <div class="col-sm-6">
                             <input type="text" class="form-control" id="extra2"
-                                   ng-model="prjParams.extra2" >
+                                   ng-model="prjParams.extra2" maxlength="20">
                         </div>
                     </div>
                     <div class="form-group">
